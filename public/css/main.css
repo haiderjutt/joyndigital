@@ -60,7 +60,7 @@ body {
 }
 
 .lat-mainbody .lat-sidebara .lat-sidebarlarge {
-    height: calc(100% - 30px);
+    height: 100%;
     color: white;
     text-align: left;
     display: flex;
@@ -130,6 +130,38 @@ body {
     color: whitesmoke;
     cursor: pointer;
     font-size: 13px;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter {
+    height: 33px;
+    width: 12vw;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background: rgba(28, 37, 37, 0.884);
+    font-size: 14px;
+    border-top: 3px solid black;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter1 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter1 a i,
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter2 a i {
+    color: white;
 }
 
 

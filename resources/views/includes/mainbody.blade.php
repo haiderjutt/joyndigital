@@ -46,7 +46,18 @@
           </li>
         </ul>
       </div>
+      <div class="lat-sidebarfooter">
+        <div class="lat-sidebarfooter1">
+          <a href="#"><i class="fa fa-power-off"></i></a>
+        </div>
+        <div class="lat-sidebarfooter2">
+          <a href="" ng-click="isShowHide(1)" value="Show Div"><i class="fa fa-chevron-left"></i></a>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="lat-sidebaramini" ng-style="sidebarcontoptionsstyle" id="miniaccordian">
+
   </div>
   <div class="lat-maincontent" ng-style="mainstyle">
     <div class="Loading" ng-show="Loadingstyle=false">
