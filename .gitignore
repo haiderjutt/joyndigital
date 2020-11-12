@@ -2,3 +2,9 @@
 
 .env
 
+/vendor
+.env
+.env.example
+Homestead.yaml
+npm-debug.log
+yarn-error.log
