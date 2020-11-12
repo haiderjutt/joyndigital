@@ -21,17 +21,7 @@
             <a type="button" href="#!AllCustomers" data-toggle="collapse" data-target="#optiontwo"><img src="./images/icons/User.png" height="30" width="30"> Customer</a>
             <div id="optiontwo" class="collapse options" data-parent="#accordion"></div>
           </li>
-          {{-- <li>
-              <a type="button" data-toggle="collapse" data-target="#optionthree"> <i class="fa fa-users"></i> Workers <span class="fa fa-chevron-down"> </span></a>
-              <div id="optionthree" class="collapse options" data-parent="#accordion">
-                <ul>
-                  <li><a href="#!AllAdministrator"><i class="fa fa-user"></i> Administrator</a> </li>
-                  <li><a href="#!AllOperators"><i class="fa fa-user-md"></i> Operator</a> </li>
-                  <li><a href="#!AllAgents"><i class="fa fa-male"></i> Vendor</a> </li>
-                  <li><a href="#!AllVendors"><i class="fa fa-road"></i> Agent</a> </li>
-                </ul>
-              </div>
-            </li> --}}
+
           <li>
             <a href="#!AllPackages" type="button" data-toggle="collapse" data-target="#optionfour"><img src="./images/icons/Packages.png" height="30" width="30"> Packages</a>
             <div id="optionfour" class="collapse options" data-parent="#accordion"></div>
