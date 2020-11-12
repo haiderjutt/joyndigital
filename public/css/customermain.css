@@ -161,6 +161,7 @@
         height: 40vh;
         width: 100%;
         overflow-y: scroll;
+        overflow-x: hidden;
         border-bottom: 2px solid black;
     }
     
@@ -185,7 +186,9 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries1 h6 {
         margin-left: 20px;
-        text-decoration: underline;
+        background-color: rgb(192, 64, 64);
+        width: 40%;
+        border-radius: 4px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: wheat;
     }
@@ -210,6 +213,7 @@
         height: 26vh;
         width: 100%;
         overflow-y: scroll;
+        overflow-x: hidden;
         border-bottom: 2px solid black;
     }
     
@@ -234,7 +238,9 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 h6 {
         margin-left: 20px;
-        text-decoration: underline;
+        background-color: rgb(192, 64, 64);
+        width: 30%;
+        border-radius: 4px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: wheat;
     }
@@ -259,6 +265,7 @@
         height: 26vh;
         width: 100%;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3::-webkit-scrollbar {
@@ -282,7 +289,9 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 h6 {
         margin-left: 20px;
-        text-decoration: underline;
+        background-color: rgb(192, 64, 64);
+        width: 30%;
+        border-radius: 4px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: wheat;
         font: bold;

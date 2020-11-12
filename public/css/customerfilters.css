@@ -10,6 +10,8 @@
         height: 60vh;
         border-left: 1px solid rgb(85, 62, 62);
         overflow-y: auto;
+        overflow-x: hidden;
+        overflow-x: hidden;
         border-left: 1px solid rgb(85, 62, 62);
     }
     
@@ -67,6 +69,7 @@
         height: 60vh;
         border-left: 1px solid rgb(85, 62, 62);
         overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .customerfilters .customerfilters2::-webkit-scrollbar {
@@ -127,6 +130,7 @@
         border-left: 1px solid rgb(85, 62, 62);
         color: wheat;
         overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .customerfilters .customerfilters3::-webkit-scrollbar {
@@ -308,6 +312,7 @@
         z-index: 1000;
         overflow: auto;
         overflow-y: auto;
+        overflow-x: hidden;
     }
     
     @keyframes animatebottom {
@@ -357,6 +362,7 @@
         display: flex;
         flex-direction: column;
         overflow-y: auto;
+        overflow-x: hidden;
         background-color: rgba(19, 18, 18, .8);
     }
     
@@ -384,7 +390,6 @@
         height: 100%;
         width: 100%;
         color: wheat;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 13px;
         text-decoration: none;
         text-align: center;
