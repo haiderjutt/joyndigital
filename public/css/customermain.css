@@ -1,0 +1,364 @@
+    /*Control width and display of scroll*/
+    /* width */
+    
+     ::-webkit-scrollbar {
+        width: 0px;
+    }
+    
+    body {
+        background-color: #000000;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .cust-mainbody {
+        color: rgba(16, 82, 3, 0.904);
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+    }
+    
+    .cust-mainbody .cust_side {
+        height: 100vh;
+        top: 30px;
+        background-color: rgba(19, 18, 18, .8);
+        position: fixed;
+        width: 12vw;
+        color: white;
+        text-align: left;
+        overflow: auto;
+        margin-left: -500px;
+        z-index: 101;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont {
+        display: none;
+        flex-direction: column;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+        height: 30px;
+        width: 100%;
+        background-color: black;
+        color: wheat;
+        font-size: 16px;
+        text-align: center;
+        padding: 4px;
+        padding-top: -2px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    @media screen and (max-width: 1700px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 16px;
+            padding: 4.5px;
+        }
+    }
+    
+    @media screen and (max-width: 1650px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 16px;
+            padding: 4.3px;
+        }
+    }
+    
+    @media screen and (max-width: 1600px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 15px;
+            padding: 4.3px;
+        }
+    }
+    
+    @media screen and (max-width: 1550px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 14px;
+            padding: 4.1px;
+        }
+    }
+    
+    @media screen and (max-width: 1500px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 13px;
+            padding: 4px;
+        }
+    }
+    
+    @media screen and (max-width: 1450px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 12.5px;
+            padding: 4px;
+        }
+    }
+    
+    @media screen and (max-width: 1400px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 12.5px;
+            padding: 3.6px;
+        }
+    }
+    
+    @media screen and (max-width: 1350px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 12px;
+            padding: 3.5px;
+        }
+    }
+    
+    @media screen and (max-width: 1300px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 12px;
+            padding: 3.2px;
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 11.5px;
+            padding: 3px;
+        }
+    }
+    
+    @media screen and (max-width: 1110px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 10px;
+            padding: 2px;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 10px;
+            padding: 1px;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 10px;
+            padding: .5px;
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 10px;
+            padding: 0px;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
+            font-size: 10px;
+            padding: .5px;
+        }
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1 {
+        height: 40vh;
+        width: 100%;
+        overflow-y: scroll;
+        border-bottom: 2px solid black;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1 h6 {
+        margin-left: 20px;
+        text-decoration: underline;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: wheat;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 .custentries111 {
+        text-align: center;
+        font: bold;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 .custentries112 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2 {
+        height: 26vh;
+        width: 100%;
+        overflow-y: scroll;
+        border-bottom: 2px solid black;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2 h6 {
+        margin-left: 20px;
+        text-decoration: underline;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: wheat;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 .custentries211 {
+        text-align: center;
+        font: bold;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 .custentries212 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3 {
+        height: 26vh;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3 h6 {
+        margin-left: 20px;
+        text-decoration: underline;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: wheat;
+        font: bold;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 .custentries311 {
+        text-align: center;
+        font: bold;
+    }
+    
+    .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 .custentries312 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /*Main body start*/
+    
+    .lat-mainbody {
+        color: rgba(16, 82, 3, 0.904);
+        padding: 0;
+    }
+    /* sidebar inner content */
+    /*Side Bar Options*/
+    /* endsidebar */
+    /* footer */
+    
+    .lat-mainbody .lat-maincontent {
+        width: 100%;
+        margin-top: 0px;
+        background-color: transparent;
+        bottom: 0;
+        margin-right: 0;
+        z-index: 100;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cust-mainbody .cust_main1 {
+        width: 100vw;
+        margin-top: 0px;
+        bottom: 0;
+        margin-right: 0;
+        z-index: 100;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cust-mainbody .cust_main1 .firstsecond1 {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: fixed;
+        z-index: 100;
+    }
+    
+    .cust-mainbody .cust_main1 .firstsecond1 #googleMap {
+        width: 100%;
+        height: 100%
+    }
+    
+    .onlinetablec {
+        font-size: 14px;
+        color: white;
+        border: 2px solid rgba(7, 7, 7, 0.849);
+        width: 100%;
+    }
+    
+    .gmnoprint {
+        /* transform: rotate(-45deg);
+        transform-origin: 100% 50%; */
+    }
+    /* ng css style */

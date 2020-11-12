@@ -1,0 +1,397 @@
+/*Control width and display of scroll*/
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+
+/* endwebkit */
+
+
+/*Main body start*/
+
+.lat-mainbody {
+    color: rgba(16, 82, 3, 0.904);
+}
+
+
+/*Sidebar*/
+
+.lat-mainbody .lat-sidebar {
+    height: 100vh;
+    top: 30px;
+    /* background: url("./../images/sidebar7.jpg" ); */
+    background-color: rgb(19, 18, 18);
+    position: fixed;
+    width: 12vw;
+}
+
+
+/* sidebar inner content */
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont {
+    height: 90.5vh;
+    color: white;
+    text-align: left;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont .sidebarheader {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont header {
+    cursor: none;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    font-weight: 700;
+    height: 5vh;
+}
+
+
+/*Side Bar Options*/
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul {
+    margin-left: -3vw;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li {
+    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li:hover {
+    background-color: rgba(60, 60, 60, 0.9);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li:hover a {
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/*Sidebar Option Hover Animation*/
+
+
+/* .lat-mainbody .lat-sidebar .lat-sidebarcont ul li:hover > a i { 
+    animation: iconshover .5s;
+    animation-iteration-count: infinite;
+ }
+@keyframes iconshover {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-30deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(30deg); }
+    100% { transform: rotate(0deg); }
+  } */
+
+
+/*Dropdown Icon for Options*/
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li a span {
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li a i {
+    font-size: 15px;
+    margin-right: 2px;
+}
+
+
+/*Option's Sub Menu*/
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul {
+    margin-top: 10px;
+    border-right: 12px double rgb(88, 97, 173);
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul li {
+    cursor: pointer;
+    list-style-type: square;
+    padding-left: 15px;
+    color: white;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul li i {
+    font-size: 13px;
+    color: white;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+
+
+/* endsidebar */
+
+
+/*Mini Side Bar*/
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions {
+    display: none;
+    width: 3.5vw;
+    margin-left: 0vw;
+    height: 90vh;
+    margin-top: 15px;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: white;
+    width: 3.5vw;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions a i {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 3.5vw;
+    text-align: center;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions a:hover {
+    padding: 2px;
+    color: whitesmoke;
+    background-color: rgba(85, 85, 85);
+}
+
+
+/*Mini Sidebar Option's Menu*/
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions {
+    border-left: .5vw double rgba(218, 213, 241, 0.678);
+    margin-left: 1.5vw;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions a {
+    background-color: rgba(41, 7, 192, 0.932);
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 1px solid white;
+    border-right: 3px solid black;
+    border-bottom: 1px solid white;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions a i {
+    font-size: 14px;
+}
+
+.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions a:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+
+/* footer */
+
+.lat-mainbody .lat-sidebar .footer {
+    height: 5vh;
+    text-align: center;
+    vertical-align: center;
+    bottom: 0;
+    position: fixed;
+    background: rgba(28, 37, 37, 0.884);
+    width: 12.4vw;
+    margin-left: -0.4vw;
+    vertical-align: middle;
+    padding-top: 1vh;
+    font-size: 14px;
+    border-top: 3px solid black;
+}
+
+.lat-mainbody .lat-sidebar .footer a i {
+    text-align: center;
+    color: white;
+}
+
+
+/* second footer */
+
+.lat-mainbody .lat-sidebar .footertwo {
+    height: 5vh;
+    text-align: center;
+    vertical-align: center;
+    background: rgba(28, 37, 37, 0.884);
+    width: 3.9vw;
+    margin-left: 0px;
+    font-size: 14px;
+    vertical-align: middle;
+    position: fixed;
+    margin-left: -0.4vw;
+    padding-top: 1vh;
+    display: none;
+    bottom: 0;
+    border-top: 3px solid black;
+}
+
+.lat-mainbody .lat-sidebar .footertwo a i {
+    text-align: right;
+    color: white;
+}
+
+.lat-mainbody .lat-maincontent {
+    margin-left: 14vw;
+    width: calc(100% - 12vw);
+    margin-top: 50px;
+    background-color: transparent;
+    height: 90vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.lat-mainbody .lat-maincontent .ngview {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    overflow-y: auto;
+}
+
+.lat-mainbody .lat-maincontent .ngview::-webkit-scrollbar {
+    width: 8px;
+    background: #5a0404;
+}
+
+.lat-mainbody .lat-maincontent .ngview::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.lat-mainbody .lat-maincontent .ngview::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+.lat-mainbody .lat-maincontent .ngview::-webkit-scrollbar-thumb:hover {
+    background: #f60303;
+}
+
+.lat-mainbody .lat-maincontent .Loading {
+    width: calc(100% - 20vw);
+    bottom: 0;
+    position: fixed;
+    z-index: 1000;
+    padding-right: 2vw;
+    height: 35px;
+}
+
+.lat-mainbody .lat-maincontent .Loading .bounce {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+}
+
+.lat-mainbody .lat-maincontent .Loading .bounce p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 100px;
+    background: repeating-linear-gradient( 45deg, #06167e, #06167e 10px, #465298 10px, #465298 20px);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    /*adjust s value for speed*/
+    animation: animatedBackground 100s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+
+/* ng css style */
+
+.alertbox {
+    text-align: center;
+    background-color: #00000065;
+    color: rgb(226, 226, 228);
+    display: none;
+    position: relative;
+    border-radius: 2px;
+    font-family: cursive;
+}
+
+#flipflop:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.alertbox {
+    text-align: center;
+    background-color: #f44336;
+    color: darkblue;
+    background-color: lightgray;
+    display: none;
+    position: relative;
+    border-radius: 2px;
+    font-family: cursive;
+}

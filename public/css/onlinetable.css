@@ -1,0 +1,202 @@
+.tabledesign {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.tabledesign .leftside {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+
+.tabledesign .leftside .leftsideone {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 25px;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+}
+
+.tabledesign .leftside .leftsideone1 {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabledesign .leftside .leftsideone2 {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabledesign .leftside .leftsideone3 {
+    width: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.tabledesign .leftside .leftsidetwo {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: auto;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+    margin-bottom: 40px;
+}
+
+.tabledesign .rightside {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.tabledesign .rightside .rightsideon1 {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+}
+
+.tabledesign .rightside .rightsideon1 .rightsideon11 {
+    margin-bottom: 5vh;
+}
+
+.tabledesignc {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.tabledesignc .customertable {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.tabledesignc .customertable .customertableone {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 25px;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+}
+
+.tabledesignc .customertable .customertableone .customertableone1 {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabledesignc .customertable .customertableone .customertableone2 {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabledesignc .customertable .customertableone .customertableone3 {
+    width: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.tabledesignc .customertable .customertabletwo {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: auto;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+    margin-bottom: 40px;
+}
+
+.onlinetabledd {
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    height: 25px;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+}
+
+.onlinetableddd {
+    text-align: center;
+    padding-top: 4px;
+}
+
+.onlinetableddvalue {
+    width: 20px;
+    border-radius: 5px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.onlinetablepage {
+    text-align: center;
+    padding-top: 4px;
+}
+
+.onlinetablepageno {
+    font-size: 12px;
+    border-top: 5px solid red;
+}
+
+.onlinetablesearch {
+    border-radius: 25px;
+    height: 23px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.onlinetable {
+    font-size: 14px;
+    color: white;
+    border: 2px solid rgba(7, 7, 7, 0.849);
+    width: 100%;
+}
+
+.onlinetableheader {
+    background-color: #383737;
+    color: white;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+    height: 25px;
+}
+
+.onlinetableheaderth {
+    color: white;
+}
+
+.onlinetablecreateuserbtn {
+    color: white;
+    font-size: 10px;
+    display: inline-block;
+    padding: 3px 6px 3px 3px;
+}
+
+.tableentries:nth-child(even) {
+    background-color: #383737;
+}
+
+.tableentries:nth-child(odd) {
+    background-color: rgb(26, 25, 25);
+}

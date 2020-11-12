@@ -1,0 +1,675 @@
+    .customerfilters {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .customerfilters .customerfilters1 {
+        width: 30%;
+        height: 60vh;
+        border-left: 1px solid rgb(85, 62, 62);
+        overflow-y: auto;
+        border-left: 1px solid rgb(85, 62, 62);
+    }
+    
+    .customerfilters .customerfilters1::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .customerfilters .customerfilters1::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .customerfilters .customerfilters1::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .customerfilters .customerfilters1::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .customerfilters .customerfilters1 .customerfilters11 {
+        display: grid;
+        grid-gap: 5px;
+        padding: 10px;
+        color: wheat;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .customerfilters .customerfilters1 .customerfilters11 .fieldtitle {
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .customerfilters .customerfilters1 .customerfilters111 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    
+    .customerfilters .customerfilters1 .customerfilters111>div input {
+        height: 30px;
+        width: 90%;
+        background-color: #27291e;
+        border-radius: 5px;
+        color: wheat;
+        font-size: 12px;
+    }
+    
+    .customerfilters .customerfilters2 {
+        width: 30%;
+        height: 60vh;
+        border-left: 1px solid rgb(85, 62, 62);
+        overflow-y: auto;
+    }
+    
+    .customerfilters .customerfilters2::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .customerfilters .customerfilters2::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .customerfilters .customerfilters2::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .customerfilters .customerfilters2::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .customerfilters .customerfilters2 .customerfilters21 {
+        display: grid;
+        grid-gap: 5px;
+        padding: 10px;
+        color: wheat;
+        width: 100%;
+    }
+    
+    .customerfilters .customerfilters2 .customerfilters21 .fieldtitle {
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .customerfilters .customerfilters2 .customerfilters211 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    
+    .customerfilters .customerfilters2 .customerfilters211>div {
+        width: 100%;
+    }
+    
+    .customerfilters .customerfilters2 .customerfilters21>div input {
+        height: 30px;
+        width: 90%;
+        background-color: #27291e;
+        border-radius: 5px;
+        color: wheat;
+        font-size: 12px;
+    }
+    
+    .customerfilters .customerfilters3 {
+        width: 40%;
+        height: 60vh;
+        border-left: 1px solid rgb(85, 62, 62);
+        color: wheat;
+        overflow-y: auto;
+    }
+    
+    .customerfilters .customerfilters3::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .customerfilters .customerfilters3::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .customerfilters .customerfilters3::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .customerfilters .customerfilters3::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .customerfilters .customerfilters3 .customerfilters31 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+        color: wheat;
+        width: 100%;
+    }
+    
+    .customerfilters .customerfilters3 .customerfilters311 {
+        display: grid;
+        grid-gap: 6px;
+        padding: 4px;
+    }
+    
+    .customerfilters .customerfilters3 .customerfilters311 .fieldtitle {
+        text-align: left;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .customerfiltersbutton {
+        height: 30px;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, .6);
+        border-bottom: 1px solid black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton1 {
+        width: 40%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        border-left: 1px solid black;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton1 .customerfiltersbutton11 {
+        width: 50%;
+        display: flex;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton1 .customerfiltersbutton11 h6 {
+        margin-left: 5px;
+        line-height: 1;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton1 .customerfiltersbutton111 {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton2 {
+        width: 30%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        border-left: 1px solid black;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton2 .customerfiltersbutton21 {
+        width: 50%;
+        display: flex;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton2 .customerfiltersbutton21 h6 {
+        margin-left: 5px;
+        line-height: 1.5;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton2 .customerfiltersbutton211 {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton3 {
+        width: 30%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        border-left: 1px solid black;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton3 .customerfiltersbutton31 {
+        width: 50%;
+        display: flex;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton3 .customerfiltersbutton31 h6 {
+        margin-left: 5px;
+        line-height: 1;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton3 .customerfiltersbutton311 {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .customerfiltersbutton .customerfiltersbutton1 button,
+    .customerfiltersbutton .customerfiltersbutton2 button,
+    .customerfiltersbutton .customerfiltersbutton3 button {
+        height: 30px;
+        width: 100%;
+        line-height: 1;
+        color: wheat;
+    }
+    
+    .customerfiltersbuttonsecond {
+        height: 30px;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, .6);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .customerfiltersbuttonsecond .first {
+        height: 30px;
+        width: 70%;
+    }
+    
+    .customerfiltersbuttonsecond .first h6 {
+        margin-left: 5px;
+        line-height: 1.5;
+    }
+    
+    .customerfiltersbuttonsecond .second {
+        height: 30px;
+        width: 30%;
+        bottom: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .customerfiltersbuttonsecond .second button {
+        height: 30px;
+        width: 100%;
+        line-height: 1;
+        color: wheat;
+    }
+    
+    .animate-bottom {
+        position: relative;
+        animation: animatebottom 0.4s;
+        position: fixed;
+        background-color: rgba(0, 0, 0, .6);
+        bottom: 15px;
+        width: 68vw;
+        left: 12vw;
+        z-index: 1000;
+        overflow: auto;
+        overflow-y: auto;
+    }
+    
+    @keyframes animatebottom {
+        from {
+            bottom: -1000px;
+            opacity: 0;
+        }
+        to {
+            bottom: 0px;
+            opacity: 1;
+        }
+    }
+    
+    .markerinfostyle {
+        opacity: .10;
+    }
+    
+    .markerinfo {
+        width: 20vw;
+        height: calc(100vh - 64px);
+        top: 30px;
+        right: 0px;
+        z-index: 990;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        transition: margin .5s;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .markerinfo .markerinfo1 {
+        height: 30px;
+        width: 100%;
+        background-color: black;
+        color: wheat;
+        text-align: center;
+    }
+    
+    .markerinfo .markerinfo1 i {
+        font-size: 20px;
+        color: wheat;
+    }
+    
+    .markerinfo .markerinfo2 {
+        height: calc(100% - 30px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        background-color: rgba(19, 18, 18, .8);
+    }
+    
+    .markerinfo .markerinfo2::-webkit-scrollbar {
+        width: 8px;
+        background: #5a0404;
+    }
+    
+    .markerinfo .markerinfo2::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .markerinfo .markerinfo2::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+    }
+    
+    .markerinfo .markerinfo2::-webkit-scrollbar-thumb:hover {
+        background: #f60303;
+    }
+    
+    .markerinfo .markerinfo2 .markerinfo21 {
+        padding-top: 5px;
+        height: 100%;
+        width: 100%;
+        color: wheat;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 13px;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .markerinfo .markerinfo2 .markerinfo21 b {
+        margin-left: 20px;
+        text-transform: uppercase;
+        float: left
+    }
+    
+    #markerinfostyle.close {
+        opacity: 1;
+    }
+    
+    .chartsinfo {
+        position: fixed;
+        width: 100VW;
+        height: 34px;
+        bottom: 0;
+        background-color: rgba(19, 18, 18, .6);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        z-index: 991;
+        left: 0;
+        margin: 0;
+        z-index: 20001;
+    }
+    
+    .chartsinfo .infobuttons {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .chartsinfo .infobuttons button {
+        margin-top: 2px;
+        height: 30px;
+        line-height: 1;
+        color: wheat;
+    }
+    
+    @media screen and (max-width: 1450px) {
+        .customerfiltersbuttonsecond .first {
+            height: 30px;
+            width: 60%;
+        }
+        .customerfiltersbuttonsecond .second {
+            height: 30px;
+            width: 40%;
+        }
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 30px;
+            width: 145px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+            color: wheat;
+            width: 100%;
+        }
+        .customerfiltersbutton .customerfiltersbutton1 {
+            width: 30%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .customerfiltersbutton .customerfiltersbutton2 {
+            width: 30%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .customerfiltersbutton .customerfiltersbutton3 {
+            width: 40%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+    }
+    
+    @media screen and (max-width: 1400px) {
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 30px;
+            width: 140px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    
+    @media screen and (max-width: 1350px) {
+        .customerfiltersheader .basic {
+            width: 30%;
+            margin-top: 5px;
+        }
+        .customerfiltersheader .range {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+        .customerfiltersheader .range .date {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 30px;
+            width: 140px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    
+    @media screen and (max-width: 1300px) {
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 30px;
+            width: 130px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    
+    @media screen and (max-width: 1250px) {
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 30px;
+            width: 120px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 30px;
+            width: 100px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .customerfiltersheader .basic {
+            width: 20%;
+            margin-top: 5px;
+        }
+        .customerfiltersheader .range {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+        .customerfiltersheader .range .date {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+        .customerfilters .customerfilters1 {
+            width: 40%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters1 .customerfilters111>div input {
+            height: 40px;
+            width: 100px;
+        }
+        .customerfilters .customerfilters2 {
+            width: 30%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 {
+            width: 20%;
+            height: 60vh;
+        }
+        .customerfilters .customerfilters3 .customerfilters31 {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            padding: 10px;
+            color: wheat;
+            width: 100%;
+        }
+        .customerfiltersbutton .customerfiltersbutton1 {
+            width: 20%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            border-left: 1px solid wheat;
+        }
+        .customerfiltersbutton .customerfiltersbutton2 {
+            width: 40%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            border-left: 1px solid wheat;
+        }
+        .customerfiltersbutton .customerfiltersbutton3 {
+            width: 40%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            border-left: 1px solid wheat;
+        }
+    }

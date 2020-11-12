@@ -1,0 +1,68 @@
+.tabledesignad {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.tabledesignad .customertable {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.tabledesignad .customertable .customertableone {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 25px;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+}
+
+.tabledesignad .customertable .customertabletwo {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 25px;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+}
+
+.tabledesignad .customertable .customertabletwo .customertabletwo1 {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabledesignad .customertable .customertabletwo .customertabletwo2 {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabledesignad .customertable .customertabletwo .customertabletwo3 {
+    width: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.tabledesignad .customertable .customertablethree {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: auto;
+    background-color: #383737;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    border: 1px solid rgba(7, 7, 7, 0.849);
+    margin-bottom: 40px;
+}

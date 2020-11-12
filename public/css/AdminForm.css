@@ -1,0 +1,505 @@
+.cform {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.cform .cform1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 17px;
+    width: 30%
+}
+
+.cform .cform1 .input-group-addon {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 0;
+    height: 30px;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(95, 158, 160, 0.247);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    padding: 2px;
+}
+
+.cform .cform1 input {
+    border-radius: 0px 4px 4px 0px;
+    width: 70%;
+}
+
+.cform .cform2 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 17px;
+    width: 30%;
+    margin-right: 5px;
+}
+
+.cform .cform2 .input-group-addon {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 0;
+    height: 30px;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(95, 158, 160, 0.247);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    padding: 2px;
+}
+
+.cform .cform2 input {
+    border-radius: 0px 4px 4px 0px;
+    width: 70%;
+}
+
+.cform .cform3 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 17px;
+    width: 35%
+}
+
+.cform .cform3 .input-group-addon {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 0;
+    height: 30px;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(95, 158, 160, 0.247);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    padding: 2px;
+}
+
+.cform .cform3 input {
+    border-radius: 0px 4px 4px 0px;
+    width: 65%;
+}
+
+.cform .cform4 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 10%
+}
+
+.cform .cform4 button {
+    line-height: 1;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.customerform {
+    width: 95%;
+    float: right;
+    display: flex;
+    grid-template-columns: auto auto;
+}
+
+.customerform input {
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    font-size: 10px;
+}
+
+.customerform select {
+    height: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    font-size: 10px;
+}
+
+.customerform input:focus {
+    background-color: white;
+    color: black;
+}
+
+.customerform .leftside .leftsidetop {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
+}
+
+.customerform .leftside .leftsidetop>div {
+    width: 50%;
+    margin-left: 1vw;
+}
+
+.customerform .leftside .leftsidetop>div label {
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    width: 95%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.customerform .leftside .leftsidetop>div input {
+    height: 30px;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 10px;
+}
+
+.customerform .leftside .leftsidetop>div input:focus {
+    background-color: white;
+    color: black;
+}
+
+.customerform .leftside .leftsideone {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
+}
+
+.customerform .leftside .leftsideone>div {
+    width: 50%;
+    margin-left: 1vw;
+}
+
+.customerform .leftside .leftsideone>div label {
+    font-size: 15px;
+    margin: 0;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.customerform .leftside .leftsideone>div input {
+    height: 30px;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.customerform .leftside .leftsideone>div input:focus {
+    background-color: white;
+    color: black;
+}
+
+.customerform .leftside .leftsidetwo {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
+}
+
+.customerform .leftside .leftsidetwo>div {
+    width: 50%;
+    margin-left: 1vw;
+}
+
+.customerform .leftside .leftsidetwo>div label {
+    font-size: 15px;
+    margin: 0;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.customerform .leftside .leftsidetwo>div input {
+    height: 30px;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.customerform .leftside .leftsidetwo>div input:focus {
+    background-color: white;
+    color: black;
+}
+
+.customerform .leftside .leftsidethree {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 30px;
+}
+
+.customerform .leftside .leftsidethree>div {
+    width: 50%;
+    margin-left: 1vw;
+    margin-bottom: 10px;
+}
+
+.customerform .leftside .leftsidethree>div label {
+    font-size: 15px;
+    margin: 0;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.customerform .leftside .leftsidethree>div select {
+    height: 30px;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 10px;
+}
+
+.customerform .leftside .leftsidefour {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 30px;
+}
+
+.customerform .leftside .leftsidefour>div {
+    width: 50%;
+    margin-left: 1vw;
+}
+
+.customerform .leftside .leftsidefour>div label {
+    font-size: 15px;
+    margin: 0;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.customerform .leftside .leftsidefour>div select {
+    height: 30px;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 10px;
+}
+
+.customerform .leftside .leftsidefive {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 30px;
+}
+
+.customerform .leftside .leftsidefive button {
+    margin-bottom: 30px;
+    margin-left: 40%;
+    width: 12vw;
+}
+
+.customerform .leftside .heading1 {
+    height: 16px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 150px;
+    margin-left: 10px;
+    padding: auto;
+    background-color: #34A7C1;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.customerform .rightside {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.customerform .rightside #googleMap {
+    width: 85%;
+    height: 400px;
+    text-align: center;
+}
+
+.customerform .rightside .sitesdetail {
+    width: 100%;
+    height: 34vh;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.customerform .rightside .sitesdetail .sitesdetail1 {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: auto;
+    color: white;
+    padding-left: 10px;
+    background-color: rgba(95, 158, 160, 0.247);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.customerform .rightside .sitesdetail .sitesdetail2 {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: auto;
+    color: white;
+    padding-left: 10px;
+    background-color: rgba(95, 158, 160, 0.247);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.customerform .rightside .sitesdetail .sitesdetail3 {
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: auto;
+    padding-left: 10px;
+    background-color: rgba(95, 158, 160, 0.247);
+    color: wheat;
+}
+
+.customerform .rightside .sitesdetail .sitesdetail4 {
+    width: 100%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: auto;
+    padding-left: 10px;
+    background-color: rgba(95, 158, 160, 0.247);
+    color: wheat;
+}
+
+.formfooter {
+    width: calc(100% - 14vw);
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    color: white;
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    flex-direction: row;
+}
+
+.formfooter .formfooter1 {
+    height: 30px;
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    ;
+}
+
+.formfooter .formfooter1 button {
+    line-height: 1;
+}
+
+.formfooter .formfooter1 select {
+    line-height: .5;
+    margin-right: 10px;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.formfooter .formfooter1 .input-group-addon {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 0;
+    height: 30px;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(95, 158, 160, 0.247);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    padding: 2px;
+}
+
+.formfooter .formfooter2 {
+    height: 30px;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+}
+
+.formfooter .formfooter2 button {
+    line-height: 1;
+    width: 50%;
+}
+
+.formfooter .formfooter3 {
+    height: 30px;
+    width: 33%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.formfooter .formfooter3 button {
+    line-height: 1;
+}
+
+
+/* 
+Template css
+ */

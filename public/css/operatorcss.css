@@ -1,0 +1,305 @@
+body{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container-fluid{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.operatortopbar{
+    height: 30px;
+    width: 100%;
+    background-image: url("./../images/topbar6.jpg");
+}
+.operatormainbody{
+    margin-top:30px;
+    width: 100%;
+    height: 100%;
+}
+.operatorlogout{
+    font-size:15px; 
+    color:white; 
+    margin-top:3px; 
+    float:right;
+    margin-right: 10px;
+}
+.cform{
+    width:100vw;
+    height:30px;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+   
+}
+.cform .cform1{
+    width:33vw;
+}
+.cform .cform2{
+    width:33vw;
+}
+.cform .cform3{
+    width:33vw;
+}
+
+.customerform {
+   display: flex;
+   grid-template-columns: auto auto;   
+    }
+.customerform .leftside{
+height: 100%;
+margin-top:1vh ;
+margin-left: 1vw;;
+width:70vw;
+color: white;    
+}
+.customerform .leftside .leftsidetop{
+display: grid;
+grid-template-columns: auto auto;
+margin-bottom: 20px;
+}
+.customerform .leftside .leftsidetop > div{
+width: 33vw;   
+margin-left: .5vw;
+} 
+.customerform .leftside .leftsidetop > div label{
+font-size: 20px;
+margin-bottom: 10px; 
+} 
+.customerform .leftside .leftsidetop > div input{
+height: 30px;
+width: 30vw;
+font-size: 15px;
+margin-bottom: 15px;
+}
+.customerform .leftside .leftsideone{
+display: grid;
+grid-template-columns: auto auto;
+margin-bottom: 20px;
+}
+.customerform .leftside .leftsideone > div{
+width: 33vw;   
+margin-left: .5vw;
+} 
+.customerform .leftside .leftsideone > div label{
+   font-size: 20px;
+   margin-bottom: 10px; 
+} 
+.customerform .leftside .leftsideone > div input{
+    height: 30px;
+    width: 30vw;
+    font-size: 15px;
+    margin-bottom: 15px;
+
+}
+
+.customerform .leftside .leftsidetwo{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 20px;
+  }
+.customerform .leftside .leftsidetwo > div{
+ width: 33vw;   
+ margin-left: .5vw;
+} 
+.customerform .leftside .leftsidetwo > div label{
+  font-size: 20px;
+  margin-bottom: 10px; 
+} 
+.customerform .leftside .leftsidetwo > div input{
+     height: 30px;
+  width: 30vw;
+    font-size: 15px;
+    
+ }  
+.customerform .leftside .leftsidethree{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 30px;
+    widows: 70vw;
+   
+}  
+.customerform .leftside .leftsidethree > div{
+margin-left: .5vw;
+width:30vw;
+height:30px;
+margin-bottom: 60px;
+border-radius: 10px;   
+} 
+.customerform .leftside .leftsidefour{
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 30px;
+    widows: 70vw; 
+} 
+.customerform .leftside .leftsidefour button{
+    margin-bottom: 30px;
+    margin-left: 40%;
+    width: 12vw; 
+
+} 
+.customerform .rightside{
+ height: 100%;
+ width:30vw;
+ margin-top:7vh;
+  right: 0;
+  }
+.customerform .rightside #googleMap{
+    width:28vw;
+    height:400px;
+    text-align: center;
+}   
+
+/* 
+Operatorhome
+ */
+ .ohomepage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+.ohomepage .ohomepageL{
+    height: 100vh;
+    width: 80vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.ohomepage .ohomepageL .page1{
+    height: 30px;
+    width: 80vw;
+    margin-top: -5px;
+    padding: 0 0px 0 0px;
+    display: flex;
+    flex-direction: row;
+}
+.ohomepage .ohomepageL .page1 .page11{
+    width:27vw;
+    background-color: #383737;
+    color:black;
+   
+}
+.ohomepage .ohomepageL .page1 .page11 select{
+    width:150px;
+    margin-top: 1px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.ohomepage .ohomepageL .page1 .page12{
+    width:27vw;
+    background-color: #383737;
+    text-align: center;
+}
+.ohomepage .ohomepageL .page1 .page13{
+    width:27vw;
+    background-color: #383737;
+    text-align: right;
+}
+.ohomepage .ohomepageL .page1 .page13 input{
+    border-radius: 10px;
+    height: 26px;
+    margin-top:1px;
+    text-align: center;
+}
+.ohomepage .ohomepageL .page2{
+    height: auto;
+    width: 80vw;
+    display:flex;
+    flex-direction: column;
+}
+.ohomepage .ohomepageL .page2 .page21{ 
+    border-radius: 5px;
+    color:white;
+    width: 80vw;
+    height:25px; 
+    border:1px solid rgba(7, 7, 7, 0.849);
+    margin-bottom: 0;
+    flex-direction: row;
+    display:flex;
+    flex-direction: row;
+ }
+ .ohomepage .ohomepageL .page2 .page21 .page211{
+    background-color:#383737;  
+    width: 40vw;
+    height: 25px;
+    display:flex;
+    flex-direction: row;
+    
+ }
+ .ohomepage .ohomepageL .page2 .page21 .page212{
+    background-color: #383737;
+    width: 40vw;
+    text-align: left;
+    height: 25px;
+ }
+ .ohomepage .ohomepageL .page2 .onlinetable{
+    font-size: 14px;
+    color:white; 
+    border:2px solid rgba(7, 7, 7, 0.849);
+    width:80vw;
+ }
+ .ohomepage .ohomepageL .page2 .onlinetable .onlinetableheader{
+    background-color:#383737;  
+    color:white; 
+    border:1px solid rgba(7, 7, 7, 0.849);
+    width: 100vw;
+    height: 25px;
+ }
+ .ohomepageL .page2 .onlinetable .onlinetableheader .onlinetableheaderth{
+   color:white;
+ }
+
+ .ohomepage .ohomepageL .page3{
+    height: 30px;
+    width: 80vw;
+    position: fixed;
+    bottom: 0;
+    background-color: #383737;
+    display: flex;
+    flex-direction: row;
+}
+.ohomepage .ohomepageL .page3 .page31{
+    width: 50vw;
+}
+.ohomepage .ohomepageL .page3 .page31 .blue {
+    background-color: #686869;
+    line-height: .3;
+    margin-top: -1px;
+    font-size: 16px;
+ }
+ .ohomepage .ohomepageL .page3 .page31 .blue:hover {
+    color: black;
+    text-shadow: none;
+ }
+ 
+ .ohomepage .ohomepageL .page3 .page32{
+    width: 50vw;
+    display: flex;
+    background-color: #383737;
+    flex-direction: row-reverse;
+}
+.ohomepage .ohomepageL .page3 .page32 .btn{
+    color:white;
+    font-size:10px;
+    padding: 3px 6px 3px 3px;
+}
+.ohomepage .ohomepageR{
+    width: 17vw;
+    height: auto;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableentries:nth-child(even) {background-color: #383737;}
+.tableentries:nth-child(odd) {background-color: rgb(26, 25, 25);}
+
+
+

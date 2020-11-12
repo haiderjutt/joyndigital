@@ -1,0 +1,120 @@
+
+.prom {
+	text-transform: uppercase;
+	letter-spacing: 0em;
+	display: inline-block;
+}
+
+.latitude {
+    display: block;
+    visibility: visible;
+    font: 7em 'Montserrat';
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+.latitude.active {
+    display: none;
+    visibility: hidden;
+    font: 7em 'Montserrat';
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+.latitude1 {
+    display: none;
+    visibility: hidden;
+    font: 7em 'Montserrat';
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+.latitude1.active {
+    display: block;
+    visibility: visible;
+    font: 7em 'Montserrat';
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+.s-text{
+  
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+  
+}
+
+.text-copy:nth-child(1){
+	stroke: rgba(194, 141, 235);
+	animation-delay: -1s;
+}
+
+.text-copy:nth-child(2){
+	stroke: green;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: orange;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: rgba(0, 250, 158);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: yellow;
+	animation-delay: -5s;
+}
+.text-copy:nth-child(6){
+	stroke: blue;
+	animation-delay: -6s;
+}
+
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+.s-text {
+  display: inline-block;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 12em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  }
+  .s-text  {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: stroke-offset 15s linear infinite;
+    }
