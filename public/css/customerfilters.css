@@ -45,7 +45,7 @@
     
     .customerfilters .customerfilters1 .customerfilters11 .fieldtitle {
         text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .customerfilters .customerfilters1 .customerfilters111 {
@@ -101,7 +101,7 @@
     
     .customerfilters .customerfilters2 .customerfilters21 .fieldtitle {
         text-align: center;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .customerfilters .customerfilters2 .customerfilters211 {
@@ -169,7 +169,7 @@
     
     .customerfilters .customerfilters3 .customerfilters311 .fieldtitle {
         text-align: left;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .customerfiltersbutton {
@@ -180,7 +180,7 @@
         flex-direction: row;
         background-color: rgba(0, 0, 0, .6);
         border-bottom: 1px solid black;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .customerfiltersbutton .customerfiltersbutton1 {
@@ -272,7 +272,7 @@
         align-content: center;
         justify-content: center;
         background-color: rgba(0, 0, 0, .6);
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .customerfiltersbuttonsecond .first {
@@ -306,7 +306,7 @@
         animation: animatebottom 0.4s;
         position: fixed;
         background-color: rgba(0, 0, 0, .6);
-        bottom: 15px;
+        bottom: 31px;
         width: 68vw;
         left: 12vw;
         z-index: 1000;
@@ -340,7 +340,7 @@
         display: flex;
         flex-direction: column;
         transition: margin .5s;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .markerinfo .markerinfo1 {
@@ -390,14 +390,16 @@
         height: 100%;
         width: 100%;
         color: wheat;
+        font-weight: 10;
         font-size: 13px;
         text-decoration: none;
         text-align: center;
     }
     
-    .markerinfo .markerinfo2 .markerinfo21 b {
+    .markerinfo .markerinfo2 .markerinfo21 span {
         margin-left: 20px;
         text-transform: uppercase;
+        font-weight: 10;
         float: left
     }
     
@@ -411,7 +413,7 @@
         height: 34px;
         bottom: 0;
         background-color: rgba(19, 18, 18, .6);
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
         z-index: 991;
         left: 0;
         margin: 0;
