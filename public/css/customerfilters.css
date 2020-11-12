@@ -421,12 +421,26 @@
     }
     
     .chartsinfo .infobuttons {
-        width: 100%;
+        width: 50%;
         height: 100%;
         display: flex;
     }
     
     .chartsinfo .infobuttons button {
+        margin-top: 2px;
+        height: 30px;
+        line-height: 1;
+        color: wheat;
+    }
+    
+    .chartsinfo .infobuttons2 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .chartsinfo .infobuttons2 button {
         margin-top: 2px;
         height: 30px;
         line-height: 1;
