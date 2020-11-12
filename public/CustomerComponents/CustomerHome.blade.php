@@ -87,7 +87,7 @@
         </div>
         <div class="markerinfo2">
             <div class="markerinfo21" >
-                <p ng-repeat="(key, value) in items['Current'][0]" ng-if="!['id','created_by_id','created_by_id','updated_by','updated_by_id','updated_at','created_by','created_at','site_cost'].includes(key)"> <b style="color:white"><%key%> :</b> <%value%> <br></p>
+                <p ng-repeat="(key, value) in items['Current'][0]" ng-if="!['id','created_by_id','created_by_id','updated_by','updated_by_id','updated_at','created_by','created_at','site_cost'].includes(key)"> <span style="color:white"><%key%> :</span> <%value%> <br></p>
             </div>
         </div>
     </div>
