@@ -164,6 +164,66 @@ body {
     color: white;
 }
 
+.lat-mainbody .lat-sidebaramini {
+    height: calc(100vh - 30px);
+    top: 30px;
+    background-color: rgb(19, 18, 18);
+    position: fixed;
+    width: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% -35px);
+    width: 100%;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini1 a,
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini2 a,
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini3 a,
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini4 a {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini a {
+    margin-top: 5px;
+    font-size: 25px;
+    color: white;
+    width: 3.5vw;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini a i {
+    width: 3.5vw;
+    text-align: center;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini a:hover {
+    color: whitesmoke;
+    background-color: rgba(85, 85, 85);
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarfooter {
+    height: 33px;
+    width: 3.5vw;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgba(28, 37, 37, 0.884);
+    font-size: 14px;
+    border-top: 3px solid black;
+}
+
 
 /* oldsidebar
  */

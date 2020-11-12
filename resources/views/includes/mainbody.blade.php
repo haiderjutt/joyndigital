@@ -57,7 +57,27 @@
     </div>
   </div>
   <div class="lat-sidebaramini" ng-style="sidebarcontoptionsstyle" id="miniaccordian">
-
+    <div class="lat-sidebarlargemini">
+      <div class="lat-sidebarlargemini1">
+        <a href="#" data-toggle="collapse" data-target="#minioptionone"><img src="./images/icons/homeJoyn.png" height="30" width="30"> </a><br>
+        <div id="minioptionone" class="collapse minioptions" data-parent="#miniaccordian"></div>
+      </div>
+      <div class="lat-sidebarlargemini2">
+        <a href="#" data-toggle="collapse" data-target="#minioptiontwo"><img src="./images/icons/user.png" height="30" width="30"> </a><br>
+        <div id="minioptiontwo" class="collapse minioptions" data-parent="#miniaccordian"></div>
+      </div>
+      <div class="lat-sidebarlargemini3">
+        <a href="#" data-toggle="collapse" data-target="#minioptionfour"><img src="./images/icons/Packages.png" height="30" width="30"> </a><br>
+        <div id="minioptionfour" class="collapse minioptions" data-parent="#miniaccordian"></div>
+      </div>
+      <div class="lat-sidebarlargemini4">
+        <a href="#" data-toggle="collapse" data-target="#minioptionfour"><img src="./images/icons/Packages.png" height="30" width="30"> </a>
+        <div id="minioptionfour" class="collapse minioptions" data-parent="#miniaccordian"></div>
+      </div>
+    </div>
+    <div class="lat-sidebarfooter">
+      <a ng-click="isShowHide(0)" value="Show Div"><i class="fa fa-chevron-right"></i></a>
+    </div>
   </div>
   <div class="lat-maincontent" ng-style="mainstyle">
     <div class="Loading" ng-show="Loadingstyle=false">
