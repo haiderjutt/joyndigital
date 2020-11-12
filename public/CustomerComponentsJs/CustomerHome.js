@@ -1,12 +1,66 @@
     ///////////initial Data Loading /////////////////////  
     app.controller('CustomerHomePage', function($scope, $filter, $http, $interval, $rootScope) {
 
-        const locations = [];
+        let locations = [];
+        let cluster;
         var markers;
         // Add a marker clusterer to manage the markers.
 
 
         $scope.isShowHide = function(data) {
+
+            // for (var i = 0; i < whole['Input'].length; i++) {
+            //     temp2 = [];
+            //     temp = [];
+
+            //     for (var j = 0; j < whole['Option'][whole['Input'][i]['field_name']].length; j++) {
+            //         if (temp.includes(whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']]) || whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']] == null) {
+            //             delete whole['Option'][whole['Input'][i]['field_name']][j];
+            //         } else {
+            //             temp.push(whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']]);
+            //             whole['Option'][whole['Input'][i]['field_name']][j]['name'] = whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']];
+            //             temp2.push(whole['Option'][whole['Input'][i]['field_name']][j]);
+            //         }
+
+            //     }
+            //     whole['Input'][i]['option'] = temp2;
+            //     whole['Input'][i]['output'] = [];
+            // }
+            //$filter('filter')(response.data['customers'], { id: global_sequence })[0];
+            //console.log(final)
+            let state = false;
+            var dummy = $filter('filter')($scope.allSites, function(value, index, array) {
+                state = false;
+                var whole = customer_fields.Basic;
+                whole['Input'].forEach(element => {
+
+                    var final = [];
+                    element['output'].forEach(value2 => {
+                        if (state == true) {
+                            return true;
+                        } else {
+                            if (value[element.field_name] == value2.name) {
+
+                                //final.push(value2.name);
+                                console.log(value[element.field_name])
+                                state = true;
+
+                            }
+                        }
+
+
+                        //console.log(value2.name);
+                    });
+                    //element.output.name
+                });
+                return state;
+            });
+            console.log(dummy);
+            locations = [];
+            dummy.forEach(item => {
+                locations.push({ lat: parseFloat(item.latitude), lng: parseFloat(item.longitude), data: item });
+            });
+            $scope.clusterload();
             $scope.$emit("SendUp", data);
         }
         var initload = function() {
@@ -300,6 +354,8 @@
             }
         ];
         $scope.clusterload = function() {
+            if (cluster) { cluster.clearMarkers(); }
+
             markers = locations.map((location) => {
 
                 var current = new google.maps.Marker({
@@ -314,7 +370,7 @@
                 })
                 return current;
             });
-            new MarkerClusterer(map, markers, {
+            cluster = new MarkerClusterer(map, markers, {
                 imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
             });
 
