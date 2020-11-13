@@ -296,13 +296,13 @@
             scaleControl: true,
             streetViewControl: true,
             streetViewControlOptions: {
-                position: google.maps.ControlPosition.TOP_CENTER,
+                position: google.maps.ControlPosition.TOP,
             },
             fullscreenControl: true,
             fullscreenControlOptions: {
                 position: google.maps.ControlPosition.TOP_CENTER,
             },
-            zoomControl: false,
+            zoomControl: true,
             zoomControlOptions: {
                 position: google.maps.ControlPosition.TOP_CENTER,
             },

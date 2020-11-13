@@ -329,6 +329,21 @@
         font-size: 14px;
         text-align: center;
     }
+    
+    .gm-bundled-control .gmnoprint {
+        position: absolute;
+        -ms-transform: rotate(90deg);
+        /* IE 9 */
+        -ms-transform-origin: 73% 39%;
+        /* IE 9 */
+        transform: rotate(90deg);
+        transform-origin: -100% -50%;
+    }
+    
+    .gm-svpc {
+        position: absolute;
+        transform: translate(0px, -113px);
+    }
     /*Main body start*/
     
     .lat-mainbody {
