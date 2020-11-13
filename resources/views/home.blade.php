@@ -231,6 +231,7 @@
     <script src="<?= asset('AdminComponentsJs/AllAgents.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/All.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/Form.js') ?>"></script>
+    <script src="<?= asset('AdminComponentsJs/SitesListPage.js') ?>"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6l5bH_gXHS6Qjxk4MdS_bDaqicwzI_uE&callback=&libraries=places&v=weekly"
