@@ -24,7 +24,8 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/administratorhome', 'HomeController@index')->name('administratorhome');
     Route::get('/partnerhome', 'HomeController@index')->name('partnerhome');
     Route::get('/customerhome', 'HomeController@index')->name('customerhome');
-
+ 
+    Route::post('/admin/loginuser', 'AdminHomeController@loginuser');
 
     Route::post('/admin/user/crud', 'AdminHomeController@userCRUD');
 

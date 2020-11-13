@@ -9,7 +9,7 @@
             <a href="#" class="licons"><img src="./images/icons/Alert.png" height="30" width="30"> <sup class="supclass">2</sup></a>
       </div>
       <div class="center">
-            <img src="images/logo.png" alt="LATITUDE" style=" height:30px; width:100px; z-index:1;">
+            <img src="images/logo.png" alt="LATITUDE" style=" height:30px; width:150px; z-index:1;">
       </div>
       <div class="right">
             <a title="Logout" href="{{ route('logout') }}" style="font-size:15px; color:white;" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="color:white; float:right;"><img src="./images/icons/Logouti.png" height="35" width="35"></a>

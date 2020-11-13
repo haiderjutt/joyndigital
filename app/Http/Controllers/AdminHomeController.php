@@ -16,7 +16,7 @@ use DateTime;
 use Auth;
 
 class AdminHomeController extends Controller
-{
+{ 
     //
     public function errAPI($message)
     {   

@@ -57,9 +57,9 @@
                    <label class="menu-open-button1">
                        <i class="fa fa-cogs"></i>
                    </label>
-                   <button  class="menu-item1 blue btn" title="Edit" ng-click="FinalSequence(item,'md','UpdatePackage')" data-toggle="modal" data-target="#FinalModal" ><img class="menu-item1 blue" src="./images/icons/Edit.png" height="60" width="60"> </button>
-                   <button  class="menu-item1 blue btn" title="Delete" ng-click="FinalSequence(item,'sm','DeletePackage')" data-toggle="modal" data-target="#FinalModal" ><img class="menu-item1 blue" src="./images/icons/Delete.png" height="60" width="60"> </button>
-                   <button  class="menu-item1 blue btn" title="Assign" title="Assign" href ng-click="FinalSequence(item,'lg','AssignPackage')" data-toggle="modal" data-target="#FinalModal" ><img class="menu-item1 blue" src="./images/icons/Assignment.png" height="60" width="60"> </button>
+                   <button  class="menu-item1 blue btn" title="Edit" ng-click="FinalSequence(item,'md','UpdatePackage')" data-toggle="modal" data-target="#FinalModal" ><i class="fa fa-edit"></i></button>
+                   <button  class="menu-item1 blue btn" title="Delete" ng-click="FinalSequence(item,'sm','DeletePackage')" data-toggle="modal" data-target="#FinalModal" ><i class="fa fa-trash"></i></button>
+                   <button  class="menu-item1 blue btn" title="Assign" title="Assign" href ng-click="FinalSequence(item,'lg','AssignPackage')" data-toggle="modal" data-target="#FinalModal" ><i class="fa fa-exchange"></i> </button>
                 </td>
             </tr>   
         </tbody>

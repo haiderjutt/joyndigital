@@ -6,27 +6,35 @@
           <header>ADMIN DASHBOARD</header>
         </div>
         <div class="sidebarheader2">
-          <img src="./images/user.png" alt="ERR" width="50" height="50" style="border:2px solid white; border-radius:50%;">
-          <h style="font-size: 12px;"><i style="color: greenyellow; font-size:10px; margin-left:10px;"> </i> Haider Majeed</h>
+          <img src="./images/{{ Auth::user()->avatar }}" alt="ERR" width="70" height="70" style="border:1px solid white; border-radius:50%;">
+         <div class="sidebarheader21">
+          <h style="font-size: 12px;"><i style="color: greenyellow; font-size:10px; margin-left:10px;"> </i> {{ Auth::user()->name }}</h>
+          <h style="font-size: 12px; color: rgba(115, 235, 35, 0.705);"><i style="color: greenyellow; font-size:10px; margin-left:10px;" class="fa fa-circle"> </i> Online</h>
+         </div>
         </div>
         <hr style="background-color:black; height:3px;">
       </div>
       <div class="lat-sidebarbody">
         <ul>
           <li>
-            <a type="button" href="#!" data-toggle="collapse" data-target="#optionone"><img src="./images/icons/homeJoyn.png" height="30" width="30"> Home</a>
+            <a type="button" href="#!" data-toggle="collapse" data-target="#optionone"> <i class="fa fa-home"></i> Home</a>
             <div id="optionone" class="collapse options" data-parent="#accordion"></div>
           </li>
           <li>
-            <a type="button" href="#!AllCustomers" data-toggle="collapse" data-target="#optiontwo"><img src="./images/icons/User.png" height="30" width="30"> Customer</a>
+            <a type="button" href="#!AllCustomers" data-toggle="collapse" data-target="#optiontwo"><i class="fa fa-user"></i> Customer</a>
             <div id="optiontwo" class="collapse options" data-parent="#accordion"></div>
           </li>
 
           <li>
-            <a href="#!AllPackages" type="button" data-toggle="collapse" data-target="#optionfour"><img src="./images/icons/Packages.png" height="30" width="30"> Packages</a>
+            <a href="#!AllPackages" type="button" data-toggle="collapse" data-target="#optionfour"><i class="fa fa-money"></i> Packages</a>
             <div id="optionfour" class="collapse options" data-parent="#accordion"></div>
           </li>
+          
           <li>
+            <a href="#!AllPackages" type="button" data-toggle="collapse" data-target="#optionfour"><i class="fa fa-500px"></i> Features</a>
+            <div id="optionfour" class="collapse options" data-parent="#accordion"></div>
+          </li>
+          <!-- <li>
             <a type="button" href="#" data-toggle="collapse" data-target="#optionfive"><img src="./images/icons/Features.png" height="30" width="30">Feature Library. <span class="fa fa-chevron-down"> </span><a>
                 <div id="optionfive" class="collapse options" data-parent="#accordion">
                   <ul>
@@ -34,7 +42,7 @@
                     <li><a href="#"><img src="./images/icons/Features.png" height="30" width="30"> Feature Library </a></li>
                   </ul>
                 </div>
-          </li>
+          </li> -->
           <li>
             <a type="button" href="#" data-toggle="collapse" data-target="#optionsix"><i class="fa fa-cubes"></i>Others <span class="fa fa-chevron-down"> </span><a>
                 <div id="optionsix" class="collapse options" data-parent="#accordion">
@@ -59,19 +67,19 @@
   <div class="lat-sidebaramini" ng-style="sidebarcontoptionsstyle" id="miniaccordian">
     <div class="lat-sidebarlargemini">
       <div class="lat-sidebarlargemini1">
-        <a href="#" data-toggle="collapse" data-target="#minioptionone"><img src="./images/icons/homeJoyn.png" height="30" width="30"> </a><br>
+        <a href="#" data-toggle="collapse" data-target="#minioptionone"><i class="fa fa-home"></i>  </a><br>
         <div id="minioptionone" class="collapse minioptions" data-parent="#miniaccordian"></div>
       </div>
       <div class="lat-sidebarlargemini2">
-        <a href="#" data-toggle="collapse" data-target="#minioptiontwo"><img src="./images/icons/user.png" height="30" width="30"> </a><br>
+        <a href="#" data-toggle="collapse" data-target="#minioptiontwo"><i class="fa fa-user"></i> </a><br>
         <div id="minioptiontwo" class="collapse minioptions" data-parent="#miniaccordian"></div>
       </div>
       <div class="lat-sidebarlargemini3">
-        <a href="#" data-toggle="collapse" data-target="#minioptionfour"><img src="./images/icons/Packages.png" height="30" width="30"> </a><br>
+        <a href="#" data-toggle="collapse" data-target="#minioptionfour"><i class="fa fa-money"></i> </a><br>
         <div id="minioptionfour" class="collapse minioptions" data-parent="#miniaccordian"></div>
       </div>
       <div class="lat-sidebarlargemini4">
-        <a href="#" data-toggle="collapse" data-target="#minioptionfour"><img src="./images/icons/Packages.png" height="30" width="30"> </a>
+        <a href="#" data-toggle="collapse" data-target="#minioptionfour"><i class="fa fa-500px"></i> </a>
         <div id="minioptionfour" class="collapse minioptions" data-parent="#miniaccordian"></div>
       </div>
     </div>

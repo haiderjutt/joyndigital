@@ -3,7 +3,7 @@ var app = angular.module('myApp', ["ngRoute", "chart.js"], function($interpolate
         $interpolateProvider.endSymbol('%>');
 
     })
-    .controller('mainbody', ['$scope', function($scope, $rootScope) {
+    .controller('mainbody', ['$scope', function($scope, $http, $interval, $rootScope) {
         $scope.balls = false;
 
         $scope.main = 'main';
@@ -207,8 +207,13 @@ app.config(['$routeProvider',
             })
             .
         when("/Form", {
-            templateUrl: './AdminComponents/Form.blade.php',
-            controller: 'Form'
+                templateUrl: './AdminComponents/Form.blade.php',
+                controller: 'Form'
+            })
+            .
+        when("/Features", {
+            templateUrl: './AdminComponents/Features.blade.php',
+            controller: 'Features'
         })
 
         .

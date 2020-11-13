@@ -5,10 +5,10 @@
         <div class="sidebarheader1">
           <header>ADMINISTRATOR DASHBOARD</header>
         </div>
-        <div class="sidebarheader2">
-          <img src="./images/user.png" alt="ERR" width="50" height="50" style="border:2px solid white; border-radius:50%;">
-          <h style="font-size: 12px;"><i style="color: greenyellow; font-size:10px; margin-left:10px;"> </i> Haider Majeed</h>
-        </div>
+        <div class="sidebarheader21">
+          <h style="font-size: 12px;"><i style="color: greenyellow; font-size:10px; margin-left:10px;"> </i> {{ Auth::user()->name }}</h>
+          <h style="font-size: 12px;"><i style="color: greenyellow; font-size:10px; margin-left:10px;" class="fa fa-circle"> </i> online</h>
+         </div>
         <hr style="background-color:black; height:3px;">
       </div>
       <div class="lat-sidebarbody">

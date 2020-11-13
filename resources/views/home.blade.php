@@ -231,6 +231,7 @@
     <script src="<?= asset('AdminComponentsJs/AllAgents.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/All.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/Form.js') ?>"></script>
+    <script src="<?= asset('AdminComponentsJs/Features.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/SitesListPage.js') ?>"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script 
