@@ -33,8 +33,44 @@
                 state = false;
                 var whole = customer_fields.Basic;
                 whole['Input'].forEach(element => {
+                    element['output'].forEach(value2 => {
+                        if (state == true) {
+                            return true;
+                        } else {
+                            if (value[element.field_name] == value2.name) {
 
-                    var final = [];
+                                //final.push(value2.name);
+                                console.log(value[element.field_name])
+                                state = true;
+
+                            }
+                        }
+
+
+                        //console.log(value2.name);
+                    });
+                    //element.output.name
+                });
+                whole['DropDown'].forEach(element => {
+                    element['output'].forEach(value2 => {
+                        if (state == true) {
+                            return true;
+                        } else {
+                            if (value[element.field_name] == value2.name) {
+
+                                //final.push(value2.name);
+                                console.log(value[element.field_name])
+                                state = true;
+
+                            }
+                        }
+
+
+                        //console.log(value2.name);
+                    });
+                    //element.output.name
+                });
+                whole['DropDown'].forEach(element => {
                     element['output'].forEach(value2 => {
                         if (state == true) {
                             return true;
