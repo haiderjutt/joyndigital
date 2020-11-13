@@ -191,22 +191,28 @@
         border-radius: 4px;
         font-family: Arial, Helvetica, sans-serif;
         color: wheat;
+        text-align: center;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 {
         display: grid;
-        grid-gap: 10px;
-        padding: 10px;
+        grid-gap: 5px;
+        padding: 4px;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 .custentries111 {
         text-align: center;
-        font: bold;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: rgba(172, 71, 12, 0.336);
+        color: white
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 .custentries112 {
         display: flex;
         flex-wrap: wrap;
+        font-size: 12px;
+        text-align: center;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 {
@@ -243,6 +249,7 @@
         border-radius: 4px;
         font-family: Arial, Helvetica, sans-serif;
         color: wheat;
+        text-align: center;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 {
@@ -253,12 +260,17 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 .custentries211 {
         text-align: center;
-        font: bold;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: rgba(172, 71, 12, 0.336);
+        color: white
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 .custentries212 {
         display: flex;
         flex-wrap: wrap;
+        font-size: 12px;
+        text-align: center;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 {
@@ -294,7 +306,7 @@
         border-radius: 4px;
         font-family: Arial, Helvetica, sans-serif;
         color: wheat;
-        font: bold;
+        text-align: center;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 {
@@ -305,12 +317,17 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 .custentries311 {
         text-align: center;
-        font: bold;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: rgba(172, 71, 12, 0.336);
+        color: white
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 .custentries312 {
         display: flex;
         flex-wrap: wrap;
+        font-size: 13px;
+        text-align: center;
     }
     /*Main body start*/
     

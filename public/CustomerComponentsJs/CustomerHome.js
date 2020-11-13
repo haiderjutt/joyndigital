@@ -7,97 +7,151 @@
         // Add a marker clusterer to manage the markers.
 
 
-        $scope.isShowHide = function(data) {
+        $scope.isShowHide = function(data, task) {
+            filterSorting(task);
 
-            // for (var i = 0; i < whole['Input'].length; i++) {
-            //     temp2 = [];
-            //     temp = [];
+            $scope.$emit("SendUp", data);
+        }
+        var filterSorting = function(expression) {
 
-            //     for (var j = 0; j < whole['Option'][whole['Input'][i]['field_name']].length; j++) {
-            //         if (temp.includes(whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']]) || whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']] == null) {
-            //             delete whole['Option'][whole['Input'][i]['field_name']][j];
-            //         } else {
-            //             temp.push(whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']]);
-            //             whole['Option'][whole['Input'][i]['field_name']][j]['name'] = whole['Option'][whole['Input'][i]['field_name']][j][whole['Input'][i]['field_name']];
-            //             temp2.push(whole['Option'][whole['Input'][i]['field_name']][j]);
-            //         }
-
-            //     }
-            //     whole['Input'][i]['option'] = temp2;
-            //     whole['Input'][i]['output'] = [];
-            // }
-            //$filter('filter')(response.data['customers'], { id: global_sequence })[0];
-            //console.log(final)
             let state = false;
             var dummy = $filter('filter')($scope.allSites, function(value, index, array) {
                 state = false;
                 var whole = customer_fields.Basic;
-                whole['Input'].forEach(element => {
-                    element['output'].forEach(value2 => {
-                        if (state == true) {
-                            return true;
-                        } else {
-                            if (value[element.field_name] == value2.name) {
+                switch (expression) {
+                    case 1:
+                        whole['Input'].forEach(element => {
+                            element['output'].forEach(value2 => {
+                                if (state == true) {
+                                    return true;
+                                } else {
+                                    if (value[element.field_name] == value2.name) {
+                                        state = true;
+                                    }
+                                }
+                            });
+                        });
+                        whole['Dropdown'].forEach(element => {
+                            element['output'].forEach(value2 => {
+                                if (state == true) {
+                                    //console.log(value2.name)
+                                    return true;
+                                } else {
+                                    if (value[element.field_name] == value2.name) {
+                                        state = true;
+                                    }
+                                }
+                            });
+                        });
+                        whole['Controlled'].forEach(element => {
+                            element['output'].forEach(value2 => {
+                                if (state == true) {
+                                    return true;
+                                } else {
+                                    if (value[element.field_name] == value2.name) {
 
-                                //final.push(value2.name);
-                                console.log(value[element.field_name])
-                                state = true;
-
+                                        //final.push(value2.name);
+                                        console.log(value[element.field_name])
+                                        state = true;
+                                    }
+                                }
+                            });
+                        });
+                        break;
+                    case 2:
+                        whole['Date'].forEach(element => {
+                            if (state == true) {
+                                return true;
+                            } else {
+                                if (new Date(value[element.field_name]) >= element.from && new Date(value[element.field_name]) <= element.to) {
+                                    state = true;
+                                }
                             }
-                        }
-
-
-                        //console.log(value2.name);
-                    });
-                    //element.output.name
-                });
-                whole['DropDown'].forEach(element => {
-                    element['output'].forEach(value2 => {
-                        if (state == true) {
-                            return true;
-                        } else {
-                            if (value[element.field_name] == value2.name) {
-
-                                //final.push(value2.name);
-                                console.log(value[element.field_name])
-                                state = true;
-
+                        });
+                        break;
+                    case 3:
+                        whole['Range'].forEach(element => {
+                            if (state == true) {
+                                return true;
+                            } else {
+                                if (value[element.field_name] >= element.from && value[element.field_name] <= element.to) {
+                                    state = true;
+                                }
                             }
-                        }
+                        });
+                        break;
+                    case 4:
+                        whole['Input'].forEach(element => {
+                            element['output'].forEach(value2 => {
+                                if (state == true) {
+                                    return true;
+                                } else {
+                                    if (value[element.field_name] == value2.name) {
+                                        state = true;
+                                    }
+                                }
+                            });
+                        });
+                        whole['Dropdown'].forEach(element => {
+                            element['output'].forEach(value2 => {
+                                if (state == true) {
+                                    //console.log(value2.name)
+                                    return true;
+                                } else {
+                                    if (value[element.field_name] == value2.name) {
+                                        state = true;
+                                    }
+                                }
+                            });
+                        });
+                        whole['Controlled'].forEach(element => {
+                            element['output'].forEach(value2 => {
+                                if (state == true) {
+                                    return true;
+                                } else {
+                                    if (value[element.field_name] == value2.name) {
 
-
-                        //console.log(value2.name);
-                    });
-                    //element.output.name
-                });
-                whole['Dropown'].forEach(element => {
-                    element['output'].forEach(value2 => {
-                        if (state == true) {
-                            return true;
-                        } else {
-                            if (value[element.field_name] == value2.name) {
-
-                                //final.push(value2.name);
-                                console.log(value[element.field_name])
-                                state = true;
-
+                                        //final.push(value2.name);
+                                        console.log(value[element.field_name])
+                                        state = true;
+                                    }
+                                }
+                            });
+                        });
+                        whole['Date'].forEach(element => {
+                            if (state == true) {
+                                return true;
+                            } else {
+                                if (new Date(value[element.field_name]) >= element.from && new Date(value[element.field_name]) <= element.to) {
+                                    state = true;
+                                }
                             }
-                        }
+                        });
+                        whole['Range'].forEach(element => {
+                            if (state == true) {
+                                return true;
+                            } else {
+                                if (value[element.field_name] >= element.from && value[element.field_name] <= element.to) {
+                                    state = true;
+                                }
+                            }
+                        });
+                        break;
+                    default:
+                        // code block
+                }
 
 
-                        //console.log(value2.name);
-                    });
-                    //element.output.name
-                });
+
+
                 return state;
             });
-            console.log(dummy);
+            //console.log(dummy);
             locations = [];
             dummy.forEach(item => {
                 locations.push({ lat: parseFloat(item.latitude), lng: parseFloat(item.longitude), data: item });
             });
             $scope.clusterload();
-            $scope.$emit("SendUp", data);
         }
         var initload = function() {
             var PipelineData = {
@@ -153,15 +207,15 @@
                         // for (var j = 0; j < whole['Options'][whole['Date'][i]['field_name']].length; j++) {
                         //     whole['Options'][whole['Date'][i]['field_name']][j]['name'] = whole['Options'][whole['Date'][i]['field_name']][j]['field_name'];
                         // }
-                        whole['Date'][i]['to'] = [];
-                        whole['Date'][i]['from'] = [];
+                        whole['Date'][i]['to'] = new Date("2020-01-01");
+                        whole['Date'][i]['from'] = new Date("2020-01-01");
                     }
                     for (var i = 0; i < whole['Range'].length; i++) {
                         // for (var j = 0; j < whole['Options'][whole['Date'][i]['field_name']].length; j++) {
                         //     whole['Options'][whole['Date'][i]['field_name']][j]['name'] = whole['Options'][whole['Date'][i]['field_name']][j]['field_name'];
                         // }
-                        whole['Range'][i]['to'] = [];
-                        whole['Range'][i]['from'] = [];
+                        whole['Range'][i]['to'] = 0;
+                        whole['Range'][i]['from'] = 0;
                     }
                     //console.log(response.data['fields']);
                     customer_fields.Basic.Controlled = whole['Controlled'];
@@ -229,7 +283,7 @@
         };
         var marker = null;
         var googleMapOption = {
-            zoom: 5,
+            zoom: 6,
             center: new google.maps.LatLng(31, 71),
             mapTypeId: google.maps.MapTypeId.TERRAIN,
 

@@ -399,7 +399,7 @@
     .markerinfo .markerinfo2 .markerinfo21 span {
         margin-left: 20px;
         text-transform: uppercase;
-        background-color: rgb(192, 64, 64);
+        background-color: rgba(141, 65, 21, 0.274);
         padding: 4px;
         border-radius: 3px;
         font-weight: 10;

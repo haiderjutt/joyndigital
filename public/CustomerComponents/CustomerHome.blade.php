@@ -49,8 +49,8 @@
                         <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries212">
-                        <div><%value.from%> <b> to </b> </div>
-                            <div> <%value.to%></div>
+                        <div><%value.from | date%> <b > - to - </b> </div>
+                            <div> <%value.to | date%></div>
 
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries312" >
-                            <div><%value.from%> <b> to </b> </div>
+                            <div><%value.from%> <b> - to - </b> </div>
                             <div> <%value.to%></div>
 
                         </div>
@@ -231,7 +231,7 @@
                         <h6>Basic search</h6>
                     </div>
                     <div class="customerfiltersbutton111">
-                        <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol)">Submit</button>
+                        <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol,1)">Submit</button>
                     </div>
                 </div>
                 <div class="customerfiltersbutton2">
@@ -239,7 +239,7 @@
                         <h6>Range search</h6>
                     </div>
                     <div class="customerfiltersbutton211">
-                        <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol)">Submit</button>
+                        <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol,3)">Submit</button>
                     </div>
                 </div>
                 <div class="customerfiltersbutton3">
@@ -247,7 +247,7 @@
                         <h6>Date search</h6>
                     </div>
                     <div class="customerfiltersbutton311">
-                        <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol)">Submit</button>
+                        <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol,2)">Submit</button>
                     </div>
                 </div>
             </div>
@@ -256,7 +256,7 @@
                     <h6>All filter Search</h6>
                 </div>
                 <div class="second">
-                    <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol)">Search All</button>
+                    <button class="btn btn-outline-secondary" data-dismiss="modal" ng-click="isShowHide(showcontrol,4)">Search All</button>
                 </div>
             </div>
 

@@ -115,9 +115,14 @@ class AdminCusFormController extends Controller
             foreach($data['form'] as $key=>$nature){
                 if($key != 'Option' && $key != 'upd'){
                     foreach($nature as $row){
-                        DB::table($sequence."_datatable")->where('id',$id)->update([
-                            $row['field_name']=>$row['value']
-                        ]);
+                        if($key == 'Date'){
+                            DB::table($sequence."_datatable")->where('id',$id)->update([
+                                $row['field_name']=> (new DateTime($row['value']))->format('yy-m-d')
+                            ]);
+                        }else{
+                            
+                        }
+                        
                     } 
                 }
                 
