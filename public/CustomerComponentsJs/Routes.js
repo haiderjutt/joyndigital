@@ -159,11 +159,8 @@ app.config(['$routeProvider',
             controller: 'CustomerHomePage'
         }).when("/CustomerHome2", {
             templateUrl: './CustomerComponents/CustomerHome2.blade.php',
-            controller: 'CustomerHomePage'
-        }).when("/CustomerHome3", {
-            templateUrl: './CustomerComponents/CustomerHome3.blade.php',
-            controller: 'CustomerHomePage3'
-        });
+            controller: 'CustomerHomePage2'
+        })
     }
 ]);
 app.run(function($rootScope) {

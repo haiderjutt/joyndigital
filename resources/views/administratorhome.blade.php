@@ -187,5 +187,6 @@
     <script src="<?= asset('AdministratorComponentsJs/CustomersList.js') ?>"></script>
     <script src="<?= asset('AdministratorComponentsJs/InternalTemplate.js') ?>"></script>
     <script src="<?= asset('AdministratorComponentsJs/CustomerForm.js') ?>"></script>
+    
   </body>
 </html>

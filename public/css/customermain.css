@@ -37,7 +37,7 @@
     .cust-mainbody .cust_side .lat-sidebarcont {
         display: none;
         flex-direction: column;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .cust_sideheader {
@@ -49,7 +49,7 @@
         text-align: center;
         padding: 4px;
         padding-top: -2px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     @media screen and (max-width: 1700px) {
@@ -189,7 +189,7 @@
         background-color: rgb(192, 64, 64);
         width: 40%;
         border-radius: 4px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: wheat;
     }
     
@@ -241,7 +241,7 @@
         background-color: rgb(192, 64, 64);
         width: 30%;
         border-radius: 4px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: wheat;
     }
     
@@ -292,7 +292,7 @@
         background-color: rgb(192, 64, 64);
         width: 30%;
         border-radius: 4px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: wheat;
         font: bold;
     }

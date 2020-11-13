@@ -514,6 +514,7 @@
     <!-- My-Js -->
     <script src="<?= asset('CustomerComponentsJs/Routes.js') ?>"></script>
     <script src="<?= asset('CustomerComponentsJs/CustomerHome.js') ?>"></script>
+    <script src="<?= asset('CustomerComponentsJs/CustomerHome2.js') ?>"></script>
     <script src="<?= asset('CustomerComponentsJs/angularjs-dropdown-multiselect.js') ?>"></script>
 
 </body>

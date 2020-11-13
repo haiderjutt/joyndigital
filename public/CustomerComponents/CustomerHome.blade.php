@@ -7,7 +7,7 @@
                 <div class="custentries11" ng-repeat="(key, value) in items['Input']">
                     <div>
                         <div class="custentries111" >
-                        <b style="color:wheat;"><% value.field_name %></b>
+                        <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries112">
                             <div ng-repeat="x in value.output"><%x.name%>,</div>
@@ -19,7 +19,7 @@
                 <div class="custentries11" ng-repeat="(key, value) in items['Dropdown']">
                     <div>
                         <div class="custentries111" >
-                            <b style="color:wheat;"><% value.field_name %></b>
+                            <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries112">
                             <div ng-repeat="x in value.output"><%x.name%>,</div>
@@ -31,7 +31,7 @@
                 <div class="custentries11" ng-repeat="(key, value) in items['Controlled']">
                     <div>
                         <div class="custentries111" >
-                        <b style="color:wheat;"><% value.field_name %></b>
+                        <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries112">
                             <div ng-repeat="x in value.output"><%x.name%>,</div>
@@ -46,7 +46,7 @@
                 <div class="custentries21" ng-repeat="(key, value) in items['Date']">
                     <div>
                         <div class="custentries211">
-                        <b style="color:wheat;"><% value.field_name %></b>
+                        <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries212">
                         <div><%value.from%> <b> to </b> </div>
@@ -61,7 +61,7 @@
                 <div class="custentries31" ng-repeat="(key, value) in items['Range']">
                     <div>
                         <div class="custentries311">
-                        <b style="color:wheat;"><% value.field_name %></b>
+                        <b style="color:white;"><% value.field_name %></b>
                         </div>
                         <div class="custentries312" >
                             <div><%value.from%> <b> to </b> </div>
