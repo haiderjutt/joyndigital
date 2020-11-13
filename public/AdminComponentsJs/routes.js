@@ -207,8 +207,14 @@ app.config(['$routeProvider',
             })
             .
         when("/Form", {
-                templateUrl: './AdminComponents/Form.blade.php',
-                controller: 'Form'
+            templateUrl: './AdminComponents/Form.blade.php',
+            controller: 'Form'
+        })
+
+        .
+        when("/siteslist", {
+                templateUrl: './AdminComponents/SitesListPage.blade.php',
+                controller: 'allSites'
             })
             .
         when("/testonline", {
