@@ -70,7 +70,7 @@
                     });
                     //element.output.name
                 });
-                whole['DropDown'].forEach(element => {
+                whole['Dropown'].forEach(element => {
                     element['output'].forEach(value2 => {
                         if (state == true) {
                             return true;

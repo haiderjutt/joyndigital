@@ -98,7 +98,7 @@
         <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">Show Filters</button>
     </div>
     <div class="infobuttons2">
-    <a href="#!CustomerHome2"><button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">Show Analytics</button></a> 
+    <a href="#!CustomerHome2"><button type="button" class="btn btn-outline-secondary" >Show Analytics</button></a> 
     </div>
 </div>
 <div class="modal fade" id="myModal" role="dialog" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
