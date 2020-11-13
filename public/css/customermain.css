@@ -211,7 +211,7 @@
     .cust-mainbody .cust_side .lat-sidebarcont .custentries1 .custentries11 .custentries112 {
         display: flex;
         flex-wrap: wrap;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
     }
     
@@ -269,7 +269,7 @@
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 .custentries212 {
         display: flex;
         flex-wrap: wrap;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
     }
     
@@ -326,7 +326,7 @@
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 .custentries312 {
         display: flex;
         flex-wrap: wrap;
-        font-size: 13px;
+        font-size: 14px;
         text-align: center;
     }
     /*Main body start*/

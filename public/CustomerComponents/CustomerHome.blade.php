@@ -11,8 +11,6 @@
                         </div>
                         <div class="custentries112">
                             <div ng-repeat="x in value.output"><%x.name%>,</div>
-
-
                         </div>
                     </div>
                 </div>
