@@ -87,7 +87,7 @@
         </div>
         <div class="markerinfo2">
             <div class="markerinfo21" >
-                <p ng-repeat="(key, value) in items['Current'][0]" ng-if="!['id','created_by_id','created_by_id','updated_by','updated_by_id','updated_at','created_by','created_at','site_cost'].includes(key)"> <span style="color:white"><%key%> :</span> <%value%> <br></p>
+                <p ng-repeat="(key, value) in items['Current'][0]" ng-if="!['id','created_by_id','created_by_id','updated_by','updated_by_id','updated_at','created_by','created_at','site_cost'].includes(key)"> <span style="color:white"><%key%> :</span><bdi> <%value%> </bdi><br></p>
             </div>
         </div>
     </div>
@@ -95,10 +95,11 @@
 <!-- //ng-style="chartsinfostyle" -->
 <div class="row chartsinfo" ng-style="chartsinfostyle">
     <div class="infobuttons">
-        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">Show Filters</button>
+        <button type="button" class="btn " data-toggle="modal" data-target="#myModal">Show Filters</button>
+        <a href="#!CustomerHome2"><button type="button" class="btn btn-outline-secondary" >Show Analytics</button></a> 
     </div>
     <div class="infobuttons2">
-    <a href="#!CustomerHome2"><button type="button" class="btn btn-outline-secondary" >Show Analytics</button></a> 
+    
     </div>
 </div>
 <div class="modal fade" id="myModal" role="dialog" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">

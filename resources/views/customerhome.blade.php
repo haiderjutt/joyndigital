@@ -67,7 +67,7 @@
             -o-user-select: none;
             user-select: none;
             white-space: normal;
-            background-color: rgba(0, 0, 0, .6);
+            background-color: rgb(192, 64, 64);
             color: wheat;
         }
 

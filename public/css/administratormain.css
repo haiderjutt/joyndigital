@@ -48,247 +48,180 @@ body {
 
 /*Sidebar*/
 
-.lat-mainbody .lat-sidebar {
-    height: 100vh;
+.lat-mainbody .lat-sidebara {
+    height: calc(100vh - 30px);
     top: 30px;
     /* background: url("./../images/sidebar7.jpg" ); */
     background-color: rgb(19, 18, 18);
     position: fixed;
     width: 12vw;
+    display: flex;
+    flex-direction: column;
 }
 
-
-/* sidebar inner content */
-
-.lat-mainbody .lat-sidebar .lat-sidebarcont {
-    height: 90.5vh;
+.lat-mainbody .lat-sidebara .lat-sidebarlarge {
+    height: 100%;
     color: white;
     text-align: left;
-}
-
-.lat-mainbody .lat-sidebar .lat-sidebarcont .sidebarheader {
-    height: 10vh;
-    width: 100%;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 0px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont header {
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarheader {
+    height: 15%;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarheader .sidebarheader1 {
+    height: 40%;
     cursor: none;
     font-size: 12px;
-    margin-top: 15px;
-    margin-bottom: 0px;
     color: rgb(255, 255, 255);
-    margin-left: 20px;
     font-weight: 700;
-    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/*Side Bar Options*/
-
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul {
-    margin-left: -3vw;
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarheader .sidebarheader2 {
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li {
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarbody {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 5%;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarbody ul {
+    margin-left: 0;
+    margin-top: 20px;
+    padding-left: 0px;
+}
+
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarbody ul li {
     cursor: pointer;
     list-style: none;
     font-size: 12px;
     padding-bottom: 10px;
     padding-top: 10px;
-    padding-left: 20px;
     font-weight: 500;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li a {
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarbody ul li a {
     text-decoration: none;
     color: white;
     width: 100%;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li:hover {
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarbody ul li:hover {
     background-color: rgba(60, 60, 60, 0.9);
     cursor: pointer;
     font-size: 13px;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li:hover a {
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarbody ul li:hover a {
     color: whitesmoke;
     cursor: pointer;
     font-size: 13px;
 }
 
-
-/*Sidebar Option Hover Animation*/
-
-
-/* .lat-mainbody .lat-sidebar .lat-sidebarcont ul li:hover > a i { 
-    animation: iconshover .5s;
-    animation-iteration-count: infinite;
- }
-@keyframes iconshover {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-30deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(30deg); }
-    100% { transform: rotate(0deg); }
-  } */
-
-
-/*Dropdown Icon for Options*/
-
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li a span {
-    float: right;
-    margin-right: 10px;
-    margin-top: 8px;
-    font-size: 10px;
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter {
+    height: 33px;
+    width: 12vw;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background: rgba(28, 37, 37, 0.884);
+    font-size: 14px;
+    border-top: 3px solid black;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li a i {
-    font-size: 15px;
-    margin-right: 2px;
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter1 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/*Option's Sub Menu*/
-
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul {
-    margin-top: 10px;
-    border-right: 12px double rgb(88, 97, 173);
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul li {
-    cursor: pointer;
-    list-style-type: square;
-    padding-left: 15px;
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter1 a i,
+.lat-mainbody .lat-sidebara .lat-sidebarlarge .lat-sidebarfooter .lat-sidebarfooter2 a i {
     color: white;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul li i {
-    font-size: 13px;
-    color: white;
-}
-
-.lat-mainbody .lat-sidebar .lat-sidebarcont ul li .options ul li a {
-    text-decoration: none;
-    font-size: 13px;
-    color: white;
-}
-
-
-/* endsidebar */
-
-
-/*Mini Side Bar*/
-
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions {
-    display: none;
+.lat-mainbody .lat-sidebaramini {
+    height: calc(100vh - 30px);
+    top: 30px;
+    background-color: rgb(19, 18, 18);
+    position: fixed;
     width: 3.5vw;
-    margin-left: 0vw;
-    height: 90vh;
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    display: none;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions a {
-    margin-top: 15px;
-    margin-bottom: 15px;
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% -35px);
+    width: 100%;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini1 a,
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini2 a,
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini3 a,
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini .lat-sidebarlargemini4 a {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini a {
+    margin-top: 5px;
     font-size: 25px;
     color: white;
     width: 3.5vw;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions a i {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini a i {
     width: 3.5vw;
     text-align: center;
 }
 
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions a:hover {
-    padding: 2px;
+.lat-mainbody .lat-sidebaramini .lat-sidebarlargemini a:hover {
     color: whitesmoke;
     background-color: rgba(85, 85, 85);
 }
 
-
-/*Mini Sidebar Option's Menu*/
-
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions {
-    border-left: .5vw double rgba(218, 213, 241, 0.678);
-    margin-left: 1.5vw;
-}
-
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions a {
-    background-color: rgba(41, 7, 192, 0.932);
-    color: white;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top: 1px solid white;
-    border-right: 3px solid black;
-    border-bottom: 1px solid white;
-}
-
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions a i {
-    font-size: 14px;
-}
-
-.lat-mainbody .lat-sidebar .lat-sidebarcontoptions .minioptions a:hover {
-    cursor: pointer;
-    color: white;
-    background-color: black;
-}
-
-
-/* footer */
-
-.lat-mainbody .lat-sidebar .footer {
-    height: 5vh;
-    text-align: center;
-    vertical-align: center;
-    bottom: 0;
+.lat-mainbody .lat-sidebaramini .lat-sidebarfooter {
+    height: 33px;
+    width: 3.5vw;
     position: fixed;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background: rgba(28, 37, 37, 0.884);
-    width: 12.4vw;
-    margin-left: -0.4vw;
-    vertical-align: middle;
-    padding-top: 1vh;
     font-size: 14px;
     border-top: 3px solid black;
-}
-
-.lat-mainbody .lat-sidebar .footer a i {
-    text-align: center;
-    color: white;
-}
-
-
-/* second footer */
-
-.lat-mainbody .lat-sidebar .footertwo {
-    height: 5vh;
-    text-align: center;
-    vertical-align: center;
-    background: rgba(28, 37, 37, 0.884);
-    width: 3.9vw;
-    margin-left: 0px;
-    font-size: 14px;
-    vertical-align: middle;
-    position: fixed;
-    margin-left: -0.4vw;
-    padding-top: 1vh;
-    display: none;
-    bottom: 0;
-    border-top: 3px solid black;
-}
-
-.lat-mainbody .lat-sidebar .footertwo a i {
-    text-align: right;
-    color: white;
 }
 
 .lat-mainbody .lat-maincontent {
