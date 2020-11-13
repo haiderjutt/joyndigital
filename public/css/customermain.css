@@ -254,8 +254,8 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 {
         display: grid;
-        grid-gap: 10px;
-        padding: 10px;
+        grid-gap: 5px;
+        padding: 4px;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries2 .custentries21 .custentries211 {
@@ -311,8 +311,8 @@
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 {
         display: grid;
-        grid-gap: 10px;
-        padding: 10px;
+        grid-gap: 5px;
+        padding: 4px;
     }
     
     .cust-mainbody .cust_side .lat-sidebarcont .custentries3 .custentries31 .custentries311 {

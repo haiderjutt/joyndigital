@@ -164,7 +164,6 @@
     </div>
   </div>
   <div class="tabcontenttwo">
-    <p class="tabsearch"> <a class="a" ng-click="FinalSequence('item','md','AddTextField','Range')" data-toggle="modal" data-target="#FinalModal" title="Add Text Field"><i class="fa fa-plus"></i> Add </a> Customer: <b><% currentname %></b> <input type="text" ng-model="test" placeholder="Search" class="onlinetablesearch input"></p>
     <table class="onlinetable">
       <thead class="onlinetableheader">
         <tr>
