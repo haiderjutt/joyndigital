@@ -1,11 +1,12 @@
 
-/nodemodules
+/node_.modules
 .env
 /vendor
-env.example
+.env.example
 yarn.error.log
 npm-debug.log
 Homestead.yaml
 .gitignore
-/.gitattributes
+/.git
+.gitattributes
 
