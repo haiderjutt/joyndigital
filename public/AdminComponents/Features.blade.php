@@ -59,7 +59,10 @@
     <div class="col-sm-12">
         <div class="row pagefooter">
             <div class="col-md-6">
-                <button class="btn btn-outline-secondary onlinetablecreateuserbtn" ng-click="FinalSequence(item,'md','NewPackage')" title="New Package" data-toggle="modal" data-target="#FinalModal"><img src="./images/icons/Packages.png" height="30" width="30" style="margin-top:-6px;">Create New Package</button>
+                <span class="input-group-addon">Active Customer</span>
+                <select class="btn btn-outline-secondary" ng-model="currentCustomer" ng-change="FeatureCustomer(currentCustomer,'CustomerName')">
+                    <option ng-repeat="item in customers" value="<%item%>"><%item.name%></option>
+                </select>
             </div>
             <div class="col-md-6" style=" text-align: right;">
                 <button class="btn btn-secondary onlinetablecreateuserbtn" ng-class="{disabled:currentPage == 0}">

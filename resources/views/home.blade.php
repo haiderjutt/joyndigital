@@ -227,11 +227,11 @@
     <script src="js/Chart.js/Chart.js"></script>
     <script src="js/chart/angular-chart.js"></script>
     
-<!-- 
+
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/maps.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script> -->
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
    
 
     <!-- My-Js -->
@@ -255,10 +255,10 @@
     <script src="<?= asset('AdminComponentsJs/FeatureConfig.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/Documentation.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/SitesListPage.js') ?>"></script>
-    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6l5bH_gXHS6Qjxk4MdS_bDaqicwzI_uE&callback=&libraries=places&v=weekly"
       defer
-    ></script> -->
+    ></script>
   </body>
 </html>

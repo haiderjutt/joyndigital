@@ -26,7 +26,7 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
 
                 }
                 $scope.items = response.data['features'];
-                $scope.modalCustomers = response.data['customers'];
+                $scope.customers = response.data['customers'];
                 $scope.modalAdministrators = administrators;
                 $scope.modalOperators = operators;
                 $scope.modalAgents = agents;
@@ -251,7 +251,14 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
     $scope.valuechecking = function() {
         return true;
     };
-    ////////
+    $scope.FeatureCustomer = function(value, name) {
+            if (name == 'CustomerName') {
+                $scope.currCustomer = JSON.parse(value);
+                global_sequence = $scope.currCustomer.id;
+                initload1();
+            }
+        }
+        ////////
     $scope.search();
     initload();
 });

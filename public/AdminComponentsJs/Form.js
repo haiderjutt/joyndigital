@@ -58,207 +58,207 @@ app.controller('Form', function($scope, $filter, $http, $interval) {
 
         });
     };
-    // $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "Tele Sales", "Corporate Sales"];
-    // $scope.data = [5, 5, 5, 5, 5];
+    $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "Tele Sales", "Corporate Sales"];
+    $scope.data = [5, 5, 5, 5, 5];
 
-    // $scope.labelsss = ["Customers", "Operators", "Agents", "Admin"];
-    // $scope.seriesss = ['Series A', 'Series B'];
-    // $scope.dataaa = [
-    //     [100, 100, 100, 100],
-    //     [5, 15, 5, 1],
-    // ];
-    // $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-    // $scope.optionsss = {
-    //     scales: {
-    //         yAxes: [{
-    //                 id: 'y-axis-1',
-    //                 type: 'linear',
-    //                 display: true,
-    //                 position: 'left'
-    //             },
-    //             {
-    //                 id: 'y-axis-2',
-    //                 type: 'linear',
-    //                 display: true,
-    //                 position: 'right'
-    //             }
-    //         ]
-    //     },
-    //     legend: {
-    //         labels: {
-    //             // This more specific font property overrides the global property
-    //             fontColor: 'black'
-    //         }
-    //     }
-    // };
-    // ////////map//////////////////
-    // var marker = null;
+    $scope.labelsss = ["Customers", "Operators", "Agents", "Admin"];
+    $scope.seriesss = ['Series A', 'Series B'];
+    $scope.dataaa = [
+        [100, 100, 100, 100],
+        [5, 15, 5, 1],
+    ];
+    $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+    $scope.optionsss = {
+        scales: {
+            yAxes: [{
+                    id: 'y-axis-1',
+                    type: 'linear',
+                    display: true,
+                    position: 'left'
+                },
+                {
+                    id: 'y-axis-2',
+                    type: 'linear',
+                    display: true,
+                    position: 'right'
+                }
+            ]
+        },
+        legend: {
+            labels: {
+                // This more specific font property overrides the global property
+                fontColor: 'black'
+            }
+        }
+    };
+    ////////map//////////////////
+    var marker = null;
 
-    // var googleMapOption = {
-    //     zoom: 5,
-    //     center: new google.maps.LatLng(31, 71),
-    //     mapTypeId: google.maps.MapTypeId.TERRAIN,
-    //     styles: [
-    //         { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-    //         {
-    //             elementType: "labels.text.stroke",
-    //             stylers: [{ color: "#242f3e" }],
-    //         },
-    //         {
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "administrative.locality",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "poi",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#d59563" }],
-    //         },
-    //         {
-    //             featureType: "poi.park",
-    //             elementType: "geometry",
-    //             stylers: [{ color: "#263c3f" }],
-    //         },
-    //         {
-    //             featureType: "poi.park",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "road",
-    //             elementType: "geometry",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "road",
-    //             elementType: "geometry.stroke",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "road",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "road.highway",
-    //             elementType: "geometry",
-    //             stylers: [{ color: "#746855" }],
-    //         },
-    //         {
-    //             featureType: "road.highway",
-    //             elementType: "geometry.stroke",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "road.highway",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#ffffff" }],
-    //         },
-    //         {
-    //             featureType: "transit",
-    //             elementType: "geometry",
-    //             stylers: [{ color: "#2f3948" }],
-    //         },
-    //         {
-    //             featureType: "transit.station",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#d59563" }],
-    //         },
-    //         {
-    //             featureType: "water",
-    //             elementType: "geometry",
-    //             stylers: [{ color: "#00FFFF" }],
-    //         },
-    //         {
-    //             featureType: "water",
-    //             elementType: "labels.text.fill",
-    //             stylers: [{ color: "#00FFFF" }],
-    //         },
-    //         {
-    //             featureType: "water",
-    //             elementType: "labels.text.stroke",
-    //             stylers: [{ color: "#00FFFF" }],
-    //         },
-    //     ]
-    // };
-    // var map = new google.maps.Map(document.getElementById('googleMap'), googleMapOption);
-    // let infoWindow = new google.maps.InfoWindow({
-    //     content: "click on map for location",
-    //     position: new google.maps.LatLng(31, 71),
-    // });
+    var googleMapOption = {
+        zoom: 5,
+        center: new google.maps.LatLng(31, 71),
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        styles: [
+            { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+            {
+                elementType: "labels.text.stroke",
+                stylers: [{ color: "#242f3e" }],
+            },
+            {
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "administrative.locality",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "poi",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [{ color: "#263c3f" }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "road",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry",
+                stylers: [{ color: "#746855" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#ffffff" }],
+            },
+            {
+                featureType: "transit",
+                elementType: "geometry",
+                stylers: [{ color: "#2f3948" }],
+            },
+            {
+                featureType: "transit.station",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+            },
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [{ color: "#00FFFF" }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#00FFFF" }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.stroke",
+                stylers: [{ color: "#00FFFF" }],
+            },
+        ]
+    };
+    var map = new google.maps.Map(document.getElementById('googleMap'), googleMapOption);
+    let infoWindow = new google.maps.InfoWindow({
+        content: "click on map for location",
+        position: new google.maps.LatLng(31, 71),
+    });
 
-    // $scope.gMap = map;
-    // google.maps.event.addListener(map, 'click', function(event) {
-    //     addMarker(event.latLng);
-    // });
-    // let input = document.getElementById("pac-input");
-    // let searchBox = new google.maps.places.SearchBox(input);
-    // map.addListener("bounds_changed", () => {
-    //     searchBox.setBounds(map.getBounds());
-    // });
-    // searchBox.addListener("places_changed", () => {
-    //     const places = searchBox.getPlaces();
+    $scope.gMap = map;
+    google.maps.event.addListener(map, 'click', function(event) {
+        addMarker(event.latLng);
+    });
+    let input = document.getElementById("pac-input");
+    let searchBox = new google.maps.places.SearchBox(input);
+    map.addListener("bounds_changed", () => {
+        searchBox.setBounds(map.getBounds());
+    });
+    searchBox.addListener("places_changed", () => {
+        const places = searchBox.getPlaces();
 
-    //     if (places.length == 0) {
-    //         return;
-    //     }
-    //     const bounds = new google.maps.LatLngBounds();
-    //     places.forEach((place) => {
-    //         if (!place.geometry) {
-    //             console.log("Returned place contains no geometry");
-    //             return;
-    //         }
-    //         marker.setPosition(place.geometry.location);
-    //         map.setCenter(place.geometry.location);
+        if (places.length == 0) {
+            return;
+        }
+        const bounds = new google.maps.LatLngBounds();
+        places.forEach((place) => {
+            if (!place.geometry) {
+                console.log("Returned place contains no geometry");
+                return;
+            }
+            marker.setPosition(place.geometry.location);
+            map.setCenter(place.geometry.location);
 
 
-    //     });
+        });
 
-    // });
+    });
 
-    // function addMarker(location) {
-    //     infoWindow.close();
-    //     infoWindow = new google.maps.InfoWindow({
-    //         position: location,
-    //     });
-    //     infoWindow.setContent(
-    //         JSON.stringify(location.toJSON(), null, 2)
-    //     );
-    //     infoWindow.open(map);
-    // }
-    // $scope.markerposition = function() {
-    //     if ($scope.lat != null && $scope.long != null) {
-    //         position = new google.maps.LatLng($scope.lat, $scope.long);
-    //         if (marker == undefined) {
-    //             marker = new google.maps.Marker({
-    //                 position: position,
-    //                 map: map,
-    //                 center: new google.maps.LatLng($scope.lat, $scope.long),
-    //             });
-    //         } else {
-    //             marker.setPosition(position);
-    //             map.setCenter(position);
-    //         }
-    //     }
-    // }
-    // $scope.windowposition = function() {
-    //     if ($scope.maplat != null && $scope.maplong != null) {
-    //         position = new google.maps.LatLng($scope.maplat, $scope.maplong);
-    //         infoWindow.close();
-    //         infoWindow = new google.maps.InfoWindow({
-    //             position: position,
-    //         });
-    //         infoWindow.setContent(
-    //             JSON.stringify(position.toJSON(), null, 2)
-    //         );
-    //         map.setCenter(position);
-    //         infoWindow.open(map);
-    //     }
-    // }
+    function addMarker(location) {
+        infoWindow.close();
+        infoWindow = new google.maps.InfoWindow({
+            position: location,
+        });
+        infoWindow.setContent(
+            JSON.stringify(location.toJSON(), null, 2)
+        );
+        infoWindow.open(map);
+    }
+    $scope.markerposition = function() {
+        if ($scope.lat != null && $scope.long != null) {
+            position = new google.maps.LatLng($scope.lat, $scope.long);
+            if (marker == undefined) {
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    center: new google.maps.LatLng($scope.lat, $scope.long),
+                });
+            } else {
+                marker.setPosition(position);
+                map.setCenter(position);
+            }
+        }
+    }
+    $scope.windowposition = function() {
+        if ($scope.maplat != null && $scope.maplong != null) {
+            position = new google.maps.LatLng($scope.maplat, $scope.maplong);
+            infoWindow.close();
+            infoWindow = new google.maps.InfoWindow({
+                position: position,
+            });
+            infoWindow.setContent(
+                JSON.stringify(position.toJSON(), null, 2)
+            );
+            map.setCenter(position);
+            infoWindow.open(map);
+        }
+    }
     $scope.$on('eventBroadcastedName', function() {
         if ($scope.footerstate) {
             console.log("formdata");
