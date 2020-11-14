@@ -6,7 +6,7 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
             sequence: global_sequence
         };
         $http.post('/Latitude/public/admin/customer/feature/init', JSON.stringify(PipelineData)).then(function(response) {
-            //console.log(response.data);
+
             if (response.data) {
                 var users = response.data['users'];
                 var customers = [];
@@ -24,8 +24,8 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
                         agents.push(users[i])
                     }
                 }
-                $scope.items = response.data['features'];
                 $scope.customers = response.data['customers'];
+                $scope.items = response.data['features'];
                 $scope.modalAdministrators = administrators;
                 $scope.modalOperators = operators;
                 $scope.modalAgents = agents;
@@ -33,11 +33,11 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
                 if (global_sequence) {
                     for (var i = 0; i < response.data['customers'].length; i++) {
                         if (response.data['customers'][i].id == global_sequence) {
-                            $scope.currentCustomer = response.data['customers'][i]["username"];
-                            console.log($scope.currentCustomer)
+                            $scope.currentCustomers = response.data['customers'][i]["username"];
                         }
                     }
                 }
+
 
             } else {
                 $scope.alertmessage = "Something Wrong went with the table.";
@@ -133,7 +133,7 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
     ////////////
     $scope.range = function(size, start, end) {
         var ret = [];
-        // console.log(size,start, end);
+
         if (size < end) {
             end = size;
             start = 0;
@@ -141,7 +141,7 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
         for (var i = start; i < end; i++) {
             ret.push(i);
         }
-        //console.log(ret);        
+
         return ret;
     };
     ////////////
@@ -182,7 +182,7 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
             adminside.CAllocation.customerdetails.New.worker.role = final.role;
         }
 
-        console.log(adminside.Allocation)
+
     };
     $scope.tabchange = function(type) {
         switch (type) {
@@ -243,12 +243,12 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
 
     $scope.$on('eventBroadcastedName', function() {
         if ($scope.footerstate) {
-            console.log($scope.footerstate);
+
             $scope.pagefooterstyle = {
                 "width": "calc(100% - 5vw)",
             }
         } else {
-            console.log($scope.footerstate);
+
             $scope.pagefooterstyle = {
                 "width": "calc(100% - 17vw)",
             }
@@ -260,10 +260,10 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
     };
     $scope.FeatureCustomer = function(value, name) {
             if (name == 'CustomerName') {
-                // $scope.currCustomer = JSON.parse(value);
-                console.log(value);
-                // global_sequence = $scope.currCustomer.id;
-                // initload();
+                global_sequence = value.id;
+                console.log(value.id);
+                console.log(global_sequence);
+                initload();
             }
         }
         ////////

@@ -60,9 +60,12 @@
         <div class="row pagefooter">
             <div class="col-md-6">
                 <span class="input-group-addon">Active Customer</span>
-                <select class="btn btn-outline-secondary" ng-model="currentCustomer" ng-change="FeatureCustomer(currentCustomer,'CustomerName')">
-                    <option ng-repeat="item in customers" value="<%item%>"><%item.name%></option>
+                <select class="btn btn-outline-secondary" name="users" ng-options="user.name for user in customers" ng-model="currentCustomer" ng-change="FeatureCustomer(currentCustomer,'CustomerName')">
+                    <option value="">Selected: <%currentCustomers%></option>
                 </select>
+                <!-- <select class="btn btn-outline-secondary" ng-model="currentCustomer" ng-change="FeatureCustomer(currentCustomer,'CustomerName')">
+                    <option ng-repeat="item in customers" value="<%item%>"><%item.name%></option>
+                </select> -->
             </div>
             <div class="col-md-6" style=" text-align: right;">
                 <button class="btn btn-secondary onlinetablecreateuserbtn" ng-class="{disabled:currentPage == 0}">
