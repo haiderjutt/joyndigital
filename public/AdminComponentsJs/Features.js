@@ -260,9 +260,10 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
     };
     $scope.FeatureCustomer = function(value, name) {
             if (name == 'CustomerName') {
-                $scope.currCustomer = JSON.parse(value);
-                global_sequence = $scope.currCustomer.id;
-                initload();
+                // $scope.currCustomer = JSON.parse(value);
+                console.log(value);
+                // global_sequence = $scope.currCustomer.id;
+                // initload();
             }
         }
         ////////
