@@ -38,8 +38,8 @@ class AdminCusDocumentationController extends Controller
             'activity_at' => now()
         ]);
         switch ($redirect) {
-            case "feature":
-                return $this->featureconfiginit($request);
+            case "document":
+                return $this->documentationinit($request);
             break;
 
               
@@ -49,10 +49,12 @@ class AdminCusDocumentationController extends Controller
     }
     public function documentationinit(Request $request){
         $sequence = $request->input('sequence');
-        $usercheck = DB::table('assignment_config')->where('customer_id',$sequence)->pluck('worker_id');
-        $data['users'] = DB::table('users')->whereIn('id',$usercheck)->get();
         $data['customers'] = DB::table('users')->where('role','Customer')->get();
         $data['confi'] = DB::table('docx_config')->where('customer_id',$sequence)->get();
+        $temp = DB::table('docx_config')->where('customer_id',$sequence)->pluck('field_name');
+        foreach($temp as $type){
+            $data['documents'][$type] = DB::table('docx_db')->where('field_name', $type)->where('customer_id',$sequence)->get();
+        }
         return response($data);
     }
 
@@ -60,31 +62,43 @@ class AdminCusDocumentationController extends Controller
     public function documentationCRUD(Request $request){
         
         $sequence = $request->input('sequence');
+  
         $check = DB::table('customer_features')->where('customer_id',$sequence)->where('feature_id',1)->pluck('id');
         if( !$check[0]){return response();}
         $data = $request->input('data');
+
         $type = $request->input('type');
+        
         switch ($type) {
             case 'New':
-                DB::table('docx_config')->insert([
-                    'field_name' => $data['Feature']['text_fields']['Name']['value'], 
-                    'customer_id' => $sequence
-                ]);
-                return $this->syslog("admin", $sequence, "Admin created new DOCUMENTATION TYPE for CUSTOMER. Customer's Id is ".$sequence, 'Documentation',$request, 'feature');
-            break;
-            case 'Update':
-                DB::table('docx_config')->where('id',$data['Feature']['current']['pre'])->update([ 
-                    'field_name' => $data['Feature']['text_fields']['Name']['value']
-                  ]);
-                  return $this->syslog("admin", $sequence, "Admin edited existing DOCUMENTATION TYPE for CUSTOMER. Customer's Id is ".$sequence, 'Documentation',$request, 'feature');
-            break;
+                if($file = $request->file('file')){
+                    $ftype = $request->input('ftype');
+                    $field_name = $request->input('field_name');
+                    $Name = $request->file('file')->getClientOriginalName();
+                    $destinationPath = public_path('docx/'.$sequence.'/'.$field_name);
+                    $file->move($destinationPath,$Name);
+                    DB::table('docx_db')->insert([
+                        'customer_id'=> $sequence,
+                        'created_at'=>now(),
+                        'created_by'=>"Admin",
+                        'field_name'=>$field_name,
+                        'type'=> $ftype,
+                        'url'=> $destinationPath ,
+                        'name'=>$Name
+
+                    ]);
+                    return $this->syslog("admin", $sequence, "Admin added a new document of type ".$ftype." to the customer in document type ".$field_name, 'Documentation',$request, 'document');
+
+                }
+                //return $this->all($request);
+            break; 
 
 
             case 'Delete':
-                $meta = DB::table('docx_config')->where('id',$data['Feature']['current']['pre'])->pluck('field_name');
-                DB::table('docx_db')->where('customer_id',$sequence)->whereIn('field_name',$meta)->delete();
-                DB::table('docx_config')->where('id',$data['Feature']['current']['pre'])->delete();
-                return $this->syslog("admin", $sequence, "Admin deleted existing DOCUMENTATION TYPE for CUSTOMER. Customer's Id is ".$sequence, 'Documentation',$request, 'feature');
+                //$meta = DB::table('docx_config')->where('id',$data['Feature']['current']['pre'])->pluck('field_name');
+                //DB::table('docx_db')->where('customer_id',$sequence)->where('id',$meta)->delete();
+                //DB::table('docx_config')->where('id',$data['Feature']['current']['pre'])->delete();
+                //return $this->syslog("admin", $sequence, "Admin deleted existing DOCUMENTATION TYPE for CUSTOMER. Customer's Id is ".$sequence, 'Documentation',$request, 'feature');
             break;
     }
 

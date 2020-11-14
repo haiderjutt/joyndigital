@@ -1,4 +1,4 @@
-app.controller('Documentation', function($scope, $filter, $http, $interval) {
+app.controller('Documentation', function($scope, $filter, $http, $interval, $rootScope) {
 
     var initload = function() {
         var PipelineData = {
@@ -7,29 +7,15 @@ app.controller('Documentation', function($scope, $filter, $http, $interval) {
         $http.post('/Latitude/public/admin/customer/documentation/init', JSON.stringify(PipelineData)).then(function(response) {
             //console.log(response.data);
             if (response.data) {
-                var users = response.data['users'];
-                var customers = [];
-                var administrators = [];
-                var operators = [];
-                var agents = [];
-                for (var i = 0; i < users.length; i++) {
-                    if (users[i].role == "Customer") {
-                        customers.push(users[i])
-                    } else if (users[i].role == "Administrator") {
-                        administrators.push(users[i])
-                    } else if (users[i].role == "Operator") {
-                        operators.push(users[i])
-                    } else if (users[i].role == "Agent") {
-                        agents.push(users[i])
-                    }
-
-                }
                 $scope.items = response.data['confi'];
                 $scope.customers = response.data['customers'];
-                $scope.modalAdministrators = administrators;
-                $scope.modalOperators = operators;
-                $scope.modalAgents = agents;
-
+                $scope.documents = response.data['documents'];
+                adminside.Document.dropdown_fields.Type.option = []
+                $scope.items.forEach(element => {;
+                    adminside.Document.dropdown_fields.Type.options.push(element.field_name);
+                    // $scope.documents['dropdown_fields']['Type']['options'].push(element.field_name);
+                });
+                //console.log(adminside.Document.dropdown_fields)
                 $scope.search();
             } else {
                 $scope.alertmessage = "Something Wrong went with the table.";
@@ -64,7 +50,7 @@ app.controller('Documentation', function($scope, $filter, $http, $interval) {
     $scope.itemsPerPage = 5;
     $scope.pagedItems = [];
     $scope.currentPage = 0;
-    $scope.formFields = { "text": {}, "dropdown": {}, "file": {}, "allocation": {}, "callocation": {} };
+    $scope.formFields = { "dropdown": {}, "file": {} };
     $scope.modal = true;
     $scope.FuncType = "";
     $scope.sort = {
@@ -175,21 +161,7 @@ app.controller('Documentation', function($scope, $filter, $http, $interval) {
 
         console.log(adminside.Allocation)
     };
-    $scope.tabchange = function(type) {
-        switch (type) {
-            case 'Administrator':
-                $scope.modalWorkers = $scope.modalAdministrators;
-                break;
-            case 'Operator':
-                $scope.modalWorkers = $scope.modalOperators;
-                break;
-            case 'Agent':
-                $scope.modalWorkers = $scope.modalAgents;
-                break;
-            default:
-                $scope.modalWorkers = $scope.modalAdministrators;
-        }
-    };
+
 
     $scope.FinalSequence = function(item, modaltype, functiontype) {
 
@@ -202,10 +174,8 @@ app.controller('Documentation', function($scope, $filter, $http, $interval) {
             pageNum = $scope.currentPage;
         }
         $scope.addModalClass("CRUDModal");
-        $scope.formFields.text = {};
         $scope.formFields.dropdown = {};
         $scope.formFields.file = {};
-        $scope.formFields.allocation = {};
         $scope.modalbodyshow = {
             "height": "0px"
         };
@@ -221,22 +191,16 @@ app.controller('Documentation', function($scope, $filter, $http, $interval) {
         $scope.modal = true;
         switch (functiontype) {
             case 'New':
-                $scope.modalheader = "Add New Document Type";
+                $scope.modalheader = "Add New Document";
                 $scope.modalbutton = "Add";
-                $scope.formFields.text = adminside.Feature.text_fields;
-                modallength = 100 + 'px';
-                break;
-            case 'Update':
-                $scope.modalheader = "Edit Document Type Name";
-                $scope.modalbutton = "Update";
-                adminside.Feature.current.pre = item.id
-                adminside.Feature.text_fields.Name.value = item.field_name;
-                $scope.formFields.text = adminside.Feature.text_fields;
-                modallength = 100 + 'px';
+                console.log(adminside.Document.dropdown_fields)
+                $scope.formFields.dropdown = adminside.Document.dropdown_fields;
+                $scope.formFields.file = adminside.Document.file_fields;
+                modallength = 250 + 'px';
                 break;
             case 'Delete':
-                adminside.Feature.current.pre = item.id
-                $scope.modalheader = "Delete Document Type";
+                adminside.Document.current.pre = item.id
+                $scope.modalheader = "Delete Document";
                 $scope.modalbutton = "Delete";
                 modallength = 30 + 'px';
                 break;
@@ -346,26 +310,36 @@ app.controller('Documentation', function($scope, $filter, $http, $interval) {
     };
     $scope.uploadFile = function() {
         $scope.$parent.Loadingstyle = true;
+        var New = "New";
         var file = event.target.files[0];
-        var Req_Url = '/Latitude/public/admin/user/crud';
+        var Req_Url = '/Latitude/public/admin/customer/documentation/crud';
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('type', 'ProfilePicture');
+        formData.append('type', $scope.FuncType);
         formData.append('sequence', global_sequence);
         formData.append('data', global_sequence);
+        formData.append('field_name', adminside.Document.dropdown_fields.Type.value);
+        formData.append('ftype', adminside.Document.dropdown_fields.Media.value);
+        formData.append('data', global_sequence);
+        console.log(adminside)
         $http.post(Req_Url, formData, { headers: { 'Content-Type': undefined } }).then(function(response) {
             if (response.data && !response.data['err']) {
+                console.log(response.data);
                 $scope.alertmessage = "Success";
                 $scope.alertboxjs = {
                     'display': "block",
                     'background': "lightgray",
                     'color': "black"
                 };
-                $scope.items = response.data;
-
-                adminside.Update.file_fields.Avatar.value = './avatars/' + file.name;
+                $scope.items = response.data['confi'];
+                $scope.customers = response.data['customers'];
+                $scope.documents = response.data['documents'];
+                adminside.Document.dropdown_fields.Type.option = []
+                $scope.items.forEach(element => {;
+                    adminside.Document.dropdown_fields.Type.options.push(element.field_name);
+                    // $scope.documents['dropdown_fields']['Type']['options'].push(element.field_name);
+                });
                 $scope.search();
-                $scope.currentPage = pageNum;
             }
         });
         $scope.$parent.Loadingstyle = false;

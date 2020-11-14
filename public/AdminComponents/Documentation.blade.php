@@ -26,8 +26,8 @@
             <table class="onlinetable ">
                 <thead class="onlinetableheader">
                     <tr>
-                        <th class="name" custom-sort order="'name'" sort="sort"><b class="onlinetableheaderth">Name&nbsp;</b><i class="fa fa-sort" id="flipflop"></i></th>
-                        
+                        <th class="name" custom-sort order="'name'" sort="sort"><b class="onlinetableheaderth">Document Type&nbsp;</b><i class="fa fa-sort" id="flipflop"></i></th>
+                        <th class="field4 " custom-sort order="'field4'" sort="sort"><b class="onlinetableheaderth">Documents&nbsp;</b><i class="fa fa-sort" id="flipflop"></i></th>
                         <th class="field5 " custom-sort order="'field5'" sort="sort"><b class="onlinetableheaderth">Actions&nbsp;</b></th>
                     </tr>
                 </thead>
@@ -36,13 +36,13 @@
                 <tbody style="font-size: 12px; background-color:#141414; cursor:pointer;">
                     <tr ng-repeat="item in pagedItems[currentPage] | orderBy:sort.sortingOrder:sort.reverse | filter:test" style="border-bottom:1px solid rgba(22, 99, 241, 0.849)">
                         <td><%item.field_name%></td>
-
+                        <td  ><ul>
+                            <li ng-repeat="doc in documents[item.field_name]" ng-if="documents"><%doc.name%> (<% doc.type %>)</li>
+                        </ul></td>
                         <td class="menu1">
                             <label class="menu-open-button1">
                                 <i class="fa fa-cogs"></i>
-                            </label>
-                            <button class="menu-item1 blue btn" title="Edit" ng-click="FinalSequence(item,'lg','Update')" data-toggle="modal" data-target="#FinalModal"><i class="fa fa-edit"></i></button>
-                            
+                            </label>                           
                             <button class="menu-item1 blue btn" title="Delete" ng-click="FinalSequence(item,'sm','Delete')" data-toggle="modal" data-target="#FinalModal"><i class="fa fa-trash"></i></button>
                            
 
@@ -65,7 +65,7 @@
     <div class="col-sm-12">
         <div class="row pagefooter">
             <div class="col-md-6">
-                <button class="btn btn-outline-secondary onlinetablecreateuserbtn" ng-click="FinalSequence(item,'lg','New')" data-toggle="modal" data-target="#FinalModal"><i style="color:white;" class="fa fa-user"></i> New Domument Type</button>
+                <button class="btn btn-outline-secondary onlinetablecreateuserbtn" ng-click="FinalSequence(item,'lg','New')" data-toggle="modal" data-target="#FinalModal"><i style="color:white;" class="fa fa-user"></i> Add Domument</button>
                 <span class="input-group-addon">Active Customer</span>
       <select class="btn btn-outline-secondary" ng-model="currentCustomer" ng-change="FormCustomer(currentCustomer,'CustomerName')">
           <option ng-repeat="item in customers" value="<%item%>"><%item.name%></option>
@@ -97,10 +97,19 @@
                     <p style="text-align: center; color:white;">Alert: <% serverMessage %><a style="float:right; cursor:pointer;" ng-click="serverAlertHide()"><i class="fa fa-times"></i></a></p>
                 </div>
                 <div id="CRUDModal">
-
-                    <div ng-repeat="item in formFields.text">
+                    <div ng-repeat="item in formFields.dropdown">
                         <label><%item.label%></label>
-                        <input class="form-control" type="text" ng-model="item.value">
+                        <select class="form-control" type="text" ng-model="item.value">
+                            <option ng-repeat="opt in item.options" value="<%opt%>">
+                                <%opt%>
+                            </option>
+                        </select>
+                    </div>
+                    <div ng-repeat="item in formFields.file" ng-if="formFields.dropdown.Type.value != ''">
+                        <label><%item.label%></label>
+                        <div class="newregisterimage">
+                            <input type="file" custom-on-change="uploadFile" />
+                        </div>
                     </div>
 
 

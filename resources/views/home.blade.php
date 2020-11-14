@@ -198,6 +198,18 @@
                 'current' :{
                     'pre' : ""
                 }
+            },
+            'Document':{
+                'dropdown_fields' : {
+                    'Media' : {'value':"Photo",'label':"Media Type", 'options':['Photo','Video','Document']},
+                    'Type' :{'value':"",'label':"Document Type", 'options':[]}
+                },
+                'file_fields' : {
+                    'Avatar' : {'value':"./images/user.png",'label':"Document"}
+                },
+                'current' :{
+                    'pre' : ""
+                }
             }
         };
         var operatorside = {
