@@ -1,2 +1,11 @@
-*.sqlite
-*.sqlite-journal
+
+/nodemodules
+.env
+/vendor
+env.example
+yarn.error.log
+npm-debug.log
+Homestead.yaml
+.gitignore
+/.gitattributes
+

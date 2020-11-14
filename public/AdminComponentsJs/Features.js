@@ -23,15 +23,22 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
                     } else if (users[i].role == "Agent") {
                         agents.push(users[i])
                     }
-
                 }
                 $scope.items = response.data['features'];
                 $scope.customers = response.data['customers'];
                 $scope.modalAdministrators = administrators;
                 $scope.modalOperators = operators;
                 $scope.modalAgents = agents;
-
                 $scope.search();
+                if (global_sequence) {
+                    for (var i = 0; i < response.data['customers'].length; i++) {
+                        if (response.data['customers'][i].id == global_sequence) {
+                            $scope.currentCustomer = response.data['customers'][i]["username"];
+                            console.log($scope.currentCustomer)
+                        }
+                    }
+                }
+
             } else {
                 $scope.alertmessage = "Something Wrong went with the table.";
                 $scope.alertboxjs = {
@@ -255,7 +262,7 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
             if (name == 'CustomerName') {
                 $scope.currCustomer = JSON.parse(value);
                 global_sequence = $scope.currCustomer.id;
-                initload1();
+                initload();
             }
         }
         ////////

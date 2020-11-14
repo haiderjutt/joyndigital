@@ -61,7 +61,7 @@
             <div class="col-md-6">
                 <span class="input-group-addon">Active Customer</span>
                 <select class="btn btn-outline-secondary" ng-model="currentCustomer" ng-change="FeatureCustomer(currentCustomer,'CustomerName')">
-                    <option ng-repeat="item in customers" value="<%item%>"><%item.name%></option>
+                    <option ng-repeat="item in customers" value=""><%item.name%></option>
                 </select>
             </div>
             <div class="col-md-6" style=" text-align: right;">
