@@ -46,6 +46,9 @@ Route::middleware('auth:web')->group(function () {
     Route::post('/admin/customer/feature/config/init', 'AdminCusFeatureConfigController@featureconfiginit');
     Route::post('/admin/customer/feature/config/crud', 'AdminCusFeatureConfigController@featureconfigCRUD');
 
+    Route::post('/admin/customer/documentation/init', 'AdminCusDocumentationController@documentationinit');
+    Route::post('/admin/customer/documentation/crud', 'AdminCusDocumentationController@documentationCRUD');
+
 
     
     // Route::get('/check', 'UserController@userOnlineStatus');

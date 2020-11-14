@@ -216,6 +216,9 @@ app.config(['$routeProvider',
         }).when("/FeatureConfig", {
             templateUrl: './AdminComponents/FeatureConfig.blade.php',
             controller: 'FeatureConfig'
+        }).when("/Documentation", {
+            templateUrl: './AdminComponents/Documentation.blade.php',
+            controller: 'Documentation'
         }).when("/testonline", {
             template: `
             
