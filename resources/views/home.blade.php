@@ -190,6 +190,14 @@
                 'type' : {
                     'field_type' :{'value':"Input",'pre':'0'}
                 }
+            },
+            'Feature' : {
+                'text_fields' : {
+                    'Name' : {'value':"",'label':"Name"},
+                },
+                'current' :{
+                    'pre' : ""
+                }
             }
         };
         var operatorside = {
@@ -232,6 +240,7 @@
     <script src="<?= asset('AdminComponentsJs/All.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/Form.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/Features.js') ?>"></script>
+    <script src="<?= asset('AdminComponentsJs/FeatureConfig.js') ?>"></script>
     <script src="<?= asset('AdminComponentsJs/SitesListPage.js') ?>"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script 

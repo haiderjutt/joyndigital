@@ -76,9 +76,13 @@ class AdminCusFormController extends Controller
             }
             $resp['fields'] = $data;
             $resp['sites'] =  DB::table($sequence."_datatable")->get();
+            $check = DB::table('customer_features')->where('customer_id',$sequence)->where('feature_id',1)->pluck('id');
+            $resp['documentation'] = $check;
+            
         }
  
         $resp['customers'] =  DB::table('users')->select('id','name','email','phone','avatar','allowed_entries','entries_done')->where('role','Customer')->get();
+
         
         return response($resp);  
     }

@@ -1,11 +1,10 @@
-app.controller('Features', function($scope, $filter, $http, $interval) {
+app.controller('FeatureConfig', function($scope, $filter, $http, $interval) {
 
-    ///////////initial Data Loading /////////////////////
     var initload = function() {
         var PipelineData = {
             sequence: global_sequence
         };
-        $http.post('/Latitude/public/admin/customer/feature/init', JSON.stringify(PipelineData)).then(function(response) {
+        $http.post('/Latitude/public/admin/customer/feature/config/init', JSON.stringify(PipelineData)).then(function(response) {
             //console.log(response.data);
             if (response.data) {
                 var users = response.data['users'];
@@ -25,8 +24,8 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
                     }
 
                 }
-                $scope.items = response.data['features'];
-                $scope.modalCustomers = response.data['customers'];
+                $scope.items = response.data['confi'];
+                $scope.customers = response.data['customers'];
                 $scope.modalAdministrators = administrators;
                 $scope.modalOperators = operators;
                 $scope.modalAgents = agents;
@@ -52,7 +51,6 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
 
 
     };
-
 
     //////////////////////Variable Defination ///////////////////////
     $scope.packName = "None";
@@ -193,19 +191,159 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
         }
     };
 
+    $scope.FinalSequence = function(item, modaltype, functiontype) {
 
-    $scope.FinalSequence = function(item) {
+        $scope.serverAlertHide();
+        var iterate = 0;
+        var modallength = 0;
+        $scope.FuncType = functiontype;
+        if (item != null) {
+            // global_sequence = item.id;
+            pageNum = $scope.currentPage;
+        }
+        $scope.addModalClass("CRUDModal");
+        $scope.formFields.text = {};
+        $scope.formFields.dropdown = {};
+        $scope.formFields.file = {};
+        $scope.formFields.allocation = {};
+        $scope.modalbodyshow = {
+            "height": "0px"
+        };
+        timer = $interval(function() {
+            iterate++;
+            if (iterate >= 1) { $scope.addModalHeight(modallength); };
+            if (iterate >= 3) {
+                $interval.cancel(timer);
+                $scope.removeModalClass("CRUDModal");
+            }
+        }, 100);
+        $scope.modaltype = modaltype;
+        $scope.modal = true;
+        switch (functiontype) {
+            case 'New':
+                $scope.modalheader = "Add New Document Type";
+                $scope.modalbutton = "Add";
+                $scope.formFields.text = adminside.Feature.text_fields;
+                modallength = 100 + 'px';
+                break;
+            case 'Update':
+                $scope.modalheader = "Edit Document Type Name";
+                $scope.modalbutton = "Update";
+                adminside.Feature.current.pre = item.id
+                adminside.Feature.text_fields.Name.value = item.field_name;
+                $scope.formFields.text = adminside.Feature.text_fields;
+                modallength = 100 + 'px';
+                break;
+            case 'Delete':
+                adminside.Feature.current.pre = item.id
+                $scope.modalheader = "Delete Document Type";
+                $scope.modalbutton = "Delete";
+                modallength = 30 + 'px';
+                break;
 
 
-
-        adminside.Feature.current.pre = item;
-
-
+            default:
+                // code block
+                break;
+        }
     }
+    $scope.addModalClass = function(id) {
+        document.getElementById(id).classList.add("open");
+    };
+    $scope.addModalHeight = function(hei) {
+        $scope.modalbodyshow = {
+            "height": hei
+        };
+    };
+    $scope.removeModalClass = function(id) {
+        if (document.getElementById(id).classList.contains("open")) {
+            document.getElementById(id).classList.remove("open");
+        }
+
+    };
+    $scope.serverAlertShow = function($message) {
+        $scope.serverMessage = $message;
+        $scope.alertbox = {
+            'display': "block",
+
+        };
+        $scope.flex_containerstyle = {
+            "height": "440px",
+        };
+        $scope.custcardsecondstyle = {
+            "height": "460px",
+        };
+    };
+    $scope.serverAlertHide = function() {
+        $scope.alertbox = {
+            'display': "none"
+        };
+        $scope.flex_containerstyle = {
+            "height": "460px"
+        };
+        $scope.custcardsecondstyle = {
+            "height": "480px",
+        };
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////
+
+    $scope.ModalRequest = function() {
+        $scope.$parent.Loadingstyle = true;
+        var Req_Url = '/Latitude/public/admin/customer/feature/config/crud';
+        //console.log(adminside);
+        var Pipeline_Data = {
+            sequence: global_sequence,
+            data: adminside,
+            type: $scope.FuncType
+        };
+
+        $scope.TablePostCall(Req_Url, Pipeline_Data);
+        $scope.$parent.Loadingstyle = false;
 
 
+    };
+    $scope.TablePostCall = function(Req_Url, Pipeline_Data) {
+        $http.post(Req_Url, JSON.stringify(Pipeline_Data)).then(function(response) {
+            if (response.data && !response.data['err']) {
+                $scope.serverAlertShow('Successful.');
+                $scope.$parent.Loadingstyle = false;
+                var users = response.data['users'];
+                var customers = [];
+                var administrators = [];
+                var operators = [];
+                var agents = [];
+                for (var i = 0; i < users.length; i++) {
+                    if (users.role == "Customer") {
+                        customers.push(users[i])
+                    } else if (users.role == "Administrator") {
+                        administrators.push(users[i])
+                    } else if (users[i].role == "Operator") {
+                        operators.push(users[i])
+                    } else if (users[i].role == "Agent") {
+                        agents.push(users[i])
+                    }
 
+                }
+                $scope.items = response.data['confi'];
+                $scope.customers = response.data['customers'];
+                $scope.modalAdministrators = administrators;
+                $scope.modalOperators = operators;
+                $scope.modalAgents = agents;
+                $scope.currentPage = pageNum;
+                $scope.search();
 
+            } else if (response.data['err'] == "404") {
+                $scope.serverAlertShow('Ambiguous Response from the server.');
+            } else {
+                $scope.serverAlertShow('Server Didnot Respond.');
+            }
+
+        }, function(response) {
+            $scope.alertmessage = "Server Error!!!.";
+            $scope.serverAlertShow('Out of bound Response.');
+        });
+    };
     $scope.uploadFile = function() {
         $scope.$parent.Loadingstyle = true;
         var file = event.target.files[0];
@@ -251,7 +389,21 @@ app.controller('Features', function($scope, $filter, $http, $interval) {
     $scope.valuechecking = function() {
         return true;
     };
-    ////////
+    $scope.FormCustomer = function(value, name) {
+            if (name == 'CustomerName') {
+                $scope.currCustomer = JSON.parse(value);
+                global_sequence = $scope.currCustomer.id;
+                initload();
+            }
+            if (name == 'InitName') {
+                //$scope.currCustomer = value;
+                //global_sequence = $scope.currCustomer.id;
+            } else {
+
+
+            }
+        }
+        ////////
     $scope.search();
     initload();
 });

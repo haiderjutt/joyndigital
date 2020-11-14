@@ -27,41 +27,19 @@
                 <thead class="onlinetableheader">
                     <tr>
                         <th class="name" custom-sort order="'name'" sort="sort"><b class="onlinetableheaderth">Name&nbsp;</b><i class="fa fa-sort" id="flipflop"></i></th>
-                        <th class="email " custom-sort order="'email'" sort="sort"><b class="onlinetableheaderth">Email&nbsp;</b> <i class="fa fa-sort" id="flipflop"></i></th>
-                        <th class="field3" custom-sort order="'field3'" sort="sort"><b class="onlinetableheaderth">Phone&nbsp; </b><i class="fa fa-sort" id="flipflop"></i></th>
-                        <th class="field4" custom-sort order="'field4'" sort="sort"><b class="onlinetableheaderth">Ban Status&nbsp; </b><i class="fa fa-sort" id="flipflop"></i></th>
-                        <th class="field5 " custom-sort order="'field5'" sort="sort"><b class="onlinetableheaderth">Actions&nbsp;</b></th>
-                        <th class="field6 " custom-sort order="'field6'" sort="sort"><b class="onlinetableheaderth">Config&nbsp;</b></th>
+                        <th class="field2 " custom-sort order="'field5'" sort="sort"><b class="onlinetableheaderth">Actions&nbsp;</b></th>
                     </tr>
                 </thead>
 
 
-                <tbody style="font-size: 12px; background-color:#141414; hover:pointer;">
+                <tbody style="font-size: 12px; background-color:#141414; cursor:pointer;">
                     <tr ng-repeat="item in pagedItems[currentPage] | orderBy:sort.sortingOrder:sort.reverse | filter:test" style="border-bottom:1px solid rgba(22, 99, 241, 0.849)">
-                        <td><%item.name%></td>
-                        <td><%item.email%></td>
-                        <td><%item.phone%></td>
-                        <td><%item.ban%></td>
+                        <td><%item.feature_name%></td>
                         <td class="menu1">
                             <label class="menu-open-button1">
                                 <i class="fa fa-cogs"></i>
                             </label>
-                            <button class="menu-item1 blue btn" title="Edit" ng-click="FinalSequence(item,'lg','Update')" data-toggle="modal" data-target="#FinalModal"><i class="fa fa-edit"></i></button>
-                            <button class="menu-item1 blue btn" title="Change Pass" ng-click="FinalSequence(item,'sm','Password')" data-toggle="modal" data-target="#FinalModal"><i class="fa fa-unlock"></i></button>
-                            <button class="menu-item1 blue btn" title="Delete" ng-click="FinalSequence(item,'sm','Delete')" data-toggle="modal" data-target="#FinalModal"><i class="fa fa-trash"></i></button>
-                            <button class="menu-item1 blue btn" title="Ban" ng-click="FinalSequence(item,'sm','Ban')" data-toggle="modal" data-target="#FinalModal"><i class="fa fa-ban"></i></button>
-
-                        </td>
-                        <td class="menu1">
-                            <label class="menu-open-button1">
-                                <i class="fa fa-cogs"></i>
-                            </label>
-                            <button class="menu-item1 blue btn" title="Allocation" ng-click="AssignSequence(item,'lg')" data-toggle="modal" data-target="#Gridmodal"><i class="fa fa-exchange"></i></button>
-                            <button class="menu-item1 blue btn" title="Field Configuration" ng-click="GlobalSequence(item.id)"><a href="#!Features"><i class="fa fa-align-left blue"></i></a></button>
-                            <button class="menu-item1 blue btn" title="Field Configuration" ng-click="GlobalSequence(item.id)"><a href="#!InternalTemplate"><i class="fa fa-exchange blue"></i></a></button>
-                            <button class="menu-item1 blue btn" title="view sites" ng-click="GlobalSequence(item.id)" data-toggle="modal" data-target="#"><a href="#!siteslist"><i class="fa fa-exchange blue"></i></a></button>
-                            <button class="menu-item1 blue btn" title="view form" ng-click="GlobalSequence(item.id)" data-toggle="modal" data-target="#"><i class="far fa-sticky-note"></i></button>
-                            <button class="menu-item1 blue btn" title="enter sites" ng-click="GlobalSequence(item.id)" data-toggle="modal" data-target="#"><i class="fa fa-exchange"></i></button>
+                            <button class="menu-item1 blue btn" title="Configure Docx " ng-if="item.id == 1" ng-click="FinalSequence(item)"> <a href="#!FeatureConfig"> <i class="fa fa-exchange"></i></a></button>
                         </td>
                     </tr>
 

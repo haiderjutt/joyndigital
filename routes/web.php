@@ -26,6 +26,7 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/customerhome', 'HomeController@index')->name('customerhome');
  
     Route::post('/admin/loginuser', 'AdminHomeController@loginuser');
+    
 
     Route::post('/admin/user/crud', 'AdminHomeController@userCRUD');
 
@@ -39,6 +40,11 @@ Route::middleware('auth:web')->group(function () {
 
     Route::post('/admin/customer/fields', 'AdminCusFieldController@fieldsinit');
     Route::post('/admin/customer/fields/crud', 'AdminCusFieldController@customerfieldCRUD');
+
+    Route::post('/admin/customer/feature/init', 'AdminCusFeatureController@featuresinit');
+
+    Route::post('/admin/customer/feature/config/init', 'AdminCusFeatureConfigController@featureconfiginit');
+    Route::post('/admin/customer/feature/config/crud', 'AdminCusFeatureConfigController@featureconfigCRUD');
 
 
     

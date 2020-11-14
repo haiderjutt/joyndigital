@@ -57,11 +57,11 @@
                                 <i class="fa fa-cogs"></i>
                             </label>
                             <button class="menu-item1 blue btn" title="Allocation" ng-click="AssignSequence(item,'lg')" data-toggle="modal" data-target="#Gridmodal"><i class="fa fa-exchange"></i></button>
-                            <button class="menu-item1 blue btn" title="Field Configuration" ng-click="GlobalSequence(item.id)"><a href="#!Features"><i class="fa fa-align-left"></i></a></button>
-                            <button class="menu-item1 blue btn" title="Field Configuration" ng-click="GlobalSequence(item.id)"><a href="#!InternalTemplate"><i class="fa fa-exchange"></i></a></button>
-                            <button class="menu-item1 blue btn" title="view sites" ng-click="GlobalSequence(item.id)" data-toggle="modal" data-target="#"><a href="#!siteslist"><i class="fa fa-exchange"></i></a></button>
-                            <button class="menu-item1 blue btn" title="view form" ng-click="GlobalSequence(item.id)" data-toggle="modal" data-target="#"><i class="far fa-sticky-note"></i></button>
-                            <button class="menu-item1 blue btn" title="enter sites" ng-click="GlobalSequence(item.id)" data-toggle="modal" data-target="#"><i class="fa fa-exchange"></i></button>
+                            <button class="menu-item1 blue btn" title="Feature Configuration" ng-click="GlobalSequence(item.id)"><a href="#!Features"><i class="fa fa-500px"></i></a></button>
+                            <button class="menu-item1 blue btn" title="Field Configuration" ng-click="GlobalSequence(item.id)"><a href="#!InternalTemplate"><i class="fa fa-list-ol"></i></a></button>
+                            <button class="menu-item1 blue btn" title="view sites" ng-click="GlobalSequence(item.id)" ><a href="#!siteslist"><i class="fa fa-map-marker"></i></a></button>
+                            <button class="menu-item1 blue btn" title="Entry Form" ng-click="GlobalSequence(item.id)" > <a href="#!Form"><i class="fa fa-wpforms"></i></a> </button>
+                            
                         </td>
                     </tr>
 

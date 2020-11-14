@@ -17,6 +17,8 @@ class TemplateConfig extends Migration
         Schema::create('customer_features', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('feature_id'); 
+            $table->string('feature_name');
+            $table->string('customer_id');
             $table->json('worker_permissions')->nullable();
             $table->json('customer_permissions')->nullable();
             $table->timestamp('created_at')->nullable();
@@ -33,6 +35,6 @@ class TemplateConfig extends Migration
     public function down()
     {
         //
-        // Schema::dropIfExists('templates');
+         Schema::dropIfExists('customer_features');
     }
 }

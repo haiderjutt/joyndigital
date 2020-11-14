@@ -53,6 +53,7 @@ app.controller('Form', function($scope, $filter, $http, $interval) {
             operatorside.form['upd'] = '0';
             var current = $filter('filter')(response.data['customers'], { id: global_sequence })[0];
             $scope.FormCustomer(current, 'InitName');
+            $scope.docx = response.data['documentation'];
 
 
         });

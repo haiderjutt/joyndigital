@@ -202,27 +202,21 @@ app.config(['$routeProvider',
             controller: 'AllAgents'
         }).
         when("/Inventory", {
-                templateUrl: './AdminComponents/Inventory.blade.php',
-                controller: 'Inventory'
-            })
-            .
-        when("/Form", {
-                templateUrl: './AdminComponents/Form.blade.php',
-                controller: 'Form'
-            })
-            .
-        when("/Features", {
+            templateUrl: './AdminComponents/Inventory.blade.php',
+            controller: 'Inventory'
+        }).when("/Form", {
+            templateUrl: './AdminComponents/Form.blade.php',
+            controller: 'Form'
+        }).when("/Features", {
             templateUrl: './AdminComponents/Features.blade.php',
             controller: 'Features'
-        })
-
-        .
-        when("/siteslist", {
-                templateUrl: './AdminComponents/SitesListPage.blade.php',
-                controller: 'allSites'
-            })
-            .
-        when("/testonline", {
+        }).when("/siteslist", {
+            templateUrl: './AdminComponents/SitesListPage.blade.php',
+            controller: 'allSites'
+        }).when("/FeatureConfig", {
+            templateUrl: './AdminComponents/FeatureConfig.blade.php',
+            controller: 'FeatureConfig'
+        }).when("/testonline", {
             template: `
             
         <div class="row justify-content-center">

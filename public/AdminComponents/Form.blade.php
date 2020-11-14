@@ -121,6 +121,7 @@
       <button ng-click="FormData()" class="btn btn-outline-secondary">Enter Data</button>
       </div>
       <div class="formfooter3">
-      <button ng-repeat="i in [1, 2, 3, 4]" class="btn btn-outline-secondary">Feature <%i%></button>
+      <button ng-repeat="i in docx" class="btn btn-outline-secondary">Documentation</button>
+      <!-- <button ng-repeat="i in [1, 2, 3, 4]" class="btn btn-outline-secondary">Feature <%i%></button> -->
       </div>
 </div>
