@@ -51,6 +51,7 @@ class AdminCusDocumentationController extends Controller
         $sequence = $request->input('sequence');
         $data['customers'] = DB::table('users')->where('role','Customer')->get();
         $data['confi'] = DB::table('docx_config')->where('customer_id',$sequence)->get();
+        $data['sites'] = DB::table($sequence."_datatable")->get();
         $temp = DB::table('docx_config')->where('customer_id',$sequence)->pluck('field_name');
         foreach($temp as $type){
             $data['documents'][$type] = DB::table('docx_db')->where('field_name', $type)->where('customer_id',$sequence)->get();
@@ -72,6 +73,7 @@ class AdminCusDocumentationController extends Controller
         switch ($type) {
             case 'New':
                 if($file = $request->file('file')){
+                    $site_id= $request->input('site_id');
                     $ftype = $request->input('ftype');
                     $field_name = $request->input('field_name');
                     $Name = $request->file('file')->getClientOriginalName();
@@ -84,7 +86,8 @@ class AdminCusDocumentationController extends Controller
                         'field_name'=>$field_name,
                         'type'=> $ftype,
                         'url'=> $destinationPath ,
-                        'name'=>$Name
+                        'name'=>$Name,
+                        'site_id'=>$site_id
 
                     ]);
                     return $this->syslog("admin", $sequence, "Admin added a new document of type ".$ftype." to the customer in document type ".$field_name, 'Documentation',$request, 'document');

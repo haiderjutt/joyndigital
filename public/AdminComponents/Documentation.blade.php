@@ -70,6 +70,10 @@
       <select class="btn btn-outline-secondary" ng-model="currentCustomer" ng-change="FormCustomer(currentCustomer,'CustomerName')">
           <option ng-repeat="item in customers" value="<%item%>"><%item.name%></option>
         </select>
+        <span class="input-group-addon">Active Site</span>
+      <select class="btn btn-outline-secondary" ng-model="currentSite" ng-change="FormCustomer(currentSite,'SiteId')">
+          <option ng-repeat="item in sites" value="<%item.id%>"><%item.id%></option>
+        </select>
             </div>
             <div class="col-md-6" style=" text-align: right;">
                 <button class="btn btn-secondary onlinetablecreateuserbtn" ng-class="{disabled:currentPage == 0}">
@@ -105,9 +109,12 @@
                             </option>
                         </select>
                     </div>
-                    <div ng-repeat="item in formFields.file" ng-if="formFields.dropdown.Type.value != ''">
+                    <div>
+                    <label>Selected Site : <%currentSite%></label>
+                    </div>
+                    <div ng-repeat="item in formFields.file" ng-if="formFields.dropdown.Type.value != '' ">
                         <label><%item.label%></label>
-                        <div class="newregisterimage">
+                        <div class="newregisterimage" ng-if="currentSite != null ">
                             <input type="file" custom-on-change="uploadFile" />
                         </div>
                     </div>

@@ -23,6 +23,7 @@ class DocxDatabase extends Migration
             $table->timestamp('created_at');
             $table->string('created_by');
             $table->string('field_name'); 
+            $table->string('site_id'); 
         });
     }
 

@@ -7,6 +7,7 @@ app.controller('Documentation', function($scope, $filter, $http, $interval, $roo
         $http.post('/Latitude/public/admin/customer/documentation/init', JSON.stringify(PipelineData)).then(function(response) {
             //console.log(response.data);
             if (response.data) {
+                $scope.sites = response.data['sites'];
                 $scope.items = response.data['confi'];
                 $scope.customers = response.data['customers'];
                 $scope.documents = response.data['documents'];
@@ -320,6 +321,7 @@ app.controller('Documentation', function($scope, $filter, $http, $interval, $roo
         formData.append('data', global_sequence);
         formData.append('field_name', adminside.Document.dropdown_fields.Type.value);
         formData.append('ftype', adminside.Document.dropdown_fields.Media.value);
+        formData.append('site_id', $scope.currentSite);
         formData.append('data', global_sequence);
         console.log(adminside)
         $http.post(Req_Url, formData, { headers: { 'Content-Type': undefined } }).then(function(response) {
